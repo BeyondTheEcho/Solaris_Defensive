@@ -22,9 +22,12 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    public GameObject LaserPrefab;
     void Update()
     {
-        PlayerMove();   
+        PlayerMove();
+        //fires a pew pew beam when you press space
+        if (Input.GetKeyDown(KeyCode.Space)) Instantiate(LaserPrefab, gameObject.transform.position + Vector3.up * 1, Quaternion.identity);
     }
 
     private void PlayerMove()
