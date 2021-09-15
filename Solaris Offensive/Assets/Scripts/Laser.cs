@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = new Vector2(0.0f, speed);
+        rb.velocity = new Vector2(speed, 0f);
         AudioSource.PlayClipAtPoint(pew, transform.position, laserVol);
     }
 

@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     {
         PlayerMove();
         //fires a pew pew beam when you press space
-        if (Input.GetKeyDown(KeyCode.Space)) Instantiate(LaserPrefab, gameObject.transform.position + Vector3.up * 1, Quaternion.identity);
+        if (Input.GetKeyDown(KeyCode.Space)) Instantiate(LaserPrefab, gameObject.transform.position + Vector3.right * 1, Quaternion.Euler(new Vector3(0,0,-90)));
     }
 
     private void PlayerMove()
