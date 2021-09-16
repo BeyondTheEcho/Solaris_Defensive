@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    //Config
+    //config
     [SerializeField] float speed = 2.0f;
     [SerializeField] AudioClip pew;
     [SerializeField] float laserVol = 1.0f;
@@ -15,26 +15,17 @@ public class Laser : MonoBehaviour
         rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.velocity = new Vector2(speed, 0f);
+        AudioSource.PlayClipAtPoint(pew, transform.position, laserVol);
     }
 
     // Update is called once per frame
     void Update()
     {
-        FireLaser();
+
     }
 
-    private void FireLaser()
-    {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            rb.velocity = new Vector2(0.0f, speed);
-            //Plays laser audio clip
-            AudioSource.PlayClipAtPoint(pew, transform.position, laserVol);
-        }
-    }
 }
