@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class EnemyPathing : MonoBehaviour
 {
     //Config
@@ -54,3 +55,5 @@ public class EnemyPathing : MonoBehaviour
         this.waveConfig = passedWaveConfig;
     }
 }
+
+*/
