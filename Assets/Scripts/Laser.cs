@@ -23,7 +23,7 @@ public class Laser : MonoBehaviour
     void Start()
     {
         rb.velocity = new Vector2(speed, 0f);
-        AudioSource.PlayClipAtPoint(pew, transform.position, laserVol);
+        AudioSource.PlayClipAtPoint(pew, Camera.main.transform.position, laserVol);
     }
 
     /*void OnCollisionEnter2D(Collider2D other)
