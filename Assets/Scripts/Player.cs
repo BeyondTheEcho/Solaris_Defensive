@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
 
+    //Player Health Variable
+    [Header("Player Variables")]
+    [SerializeField] int playerShields = 50;
+    [SerializeField] int playerHull = 100;
+
     // In Script Config / Variables
     float xMin;
     float xMax;

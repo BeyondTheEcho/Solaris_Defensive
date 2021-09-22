@@ -8,6 +8,7 @@ public class Laser : MonoBehaviour
     [SerializeField] float speed = 2.0f;
     [SerializeField] AudioClip pew;
     [SerializeField] float laserVol = 1.0f;
+    [SerializeField] int laserDamage = 1;
     private Rigidbody2D rb;
 
     // Examples - not doing anything
@@ -37,4 +38,14 @@ public class Laser : MonoBehaviour
         
     }
 
+    public void DestroyLaser()
+    {
+        Object.Destroy(gameObject);
+    }
+
+    
+    public int ReturnLaserDamage()
+    {
+        return laserDamage;
+    }
 }
