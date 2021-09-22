@@ -62,4 +62,8 @@ public class UIController : MonoBehaviour
             MenuSwitch = true;
         }
     }
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
