@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8092456863666089363
+--- !u!1 &403637913718406782
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8092456863666089364}
-  - component: {fileID: 8092456863666089365}
-  - component: {fileID: 8092456863666089362}
+  - component: {fileID: 403637913718406771}
+  - component: {fileID: 403637913718406768}
+  - component: {fileID: 403637913718406769}
+  - component: {fileID: 403637913718406770}
   m_Layer: 0
-  m_Name: GearScrap
+  m_Name: Gearscrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8092456863666089364
+--- !u!4 &403637913718406771
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8092456863666089363}
+  m_GameObject: {fileID: 403637913718406782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.391, y: 2.6032, z: 0}
-  m_LocalScale: {x: 0.4571, y: 0.4571, z: 0.4571}
+  m_LocalPosition: {x: 7.2493, y: -0.1663, z: 0}
+  m_LocalScale: {x: 0.39443052, y: 0.39443052, z: 0.39443052}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8092456863666089365
+--- !u!212 &403637913718406768
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8092456863666089363}
+  m_GameObject: {fileID: 403637913718406782}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,13 +84,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8092456863666089362
+--- !u!114 &403637913718406769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8092456863666089363}
+  m_GameObject: {fileID: 403637913718406782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  moveSpeed: 2
+--- !u!114 &403637913718406770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403637913718406782}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c9aca3a7579d3a44b0e370e58479137, type: 3}
