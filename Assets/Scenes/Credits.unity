@@ -399,9 +399,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lead Programmer\t\tCatSandwich\n\nProject Manager & \nGeneralist Programmer\tStelios
-    Klapsis\n\nGeneralist programmer\tIsaac Wurtele\n\nUI Specialist\t\t\tClare Benn\n\nArt
-    Director\t\t\tEmily Hoover\n\n\n\n"
+  m_text: "Project Manager & \nGeneralist Programmer\tStelios Klapsis\n\nLead Programmer\t\tCatSandwich\n\nGeneralist
+    programmer\tIsaac Wurtele\n\nUI Specialist\t\t\tClare Benn\n\nArt Director\t\t\tEmily
+    Hoover\n\nLead Storyteller\t\tJonah Kelly\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
   m_sharedMaterial: {fileID: -4502235891908585967, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
