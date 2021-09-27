@@ -12,12 +12,10 @@ public class Player : MonoBehaviour
     [SerializeField] float laserFiringPeriod = 0.2f;
     [SerializeField] int playerDeathDelay = 5;
 
-    [Header("Player Health Variables")]
-    [SerializeField] float playerHull = 1000f;
-    [SerializeField] float playerShield = 500f;
-
-    //Coroutines Variables
-    Coroutine fireConstantly;
+    //Player Health Variable
+    [Header("Player Variables")]
+    [SerializeField] int playerShields = 50;
+    [SerializeField] int playerHull = 100;
 
     // In Script Config / Variables
     float xMin;

@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 241, y: -107}
   m_SizeDelta: {x: 204.97131, y: 136.5125}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &189711433
@@ -365,12 +365,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.10211026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.10211026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10211026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.63
+      value: -7.44
       objectReference: {fileID: 0}
     - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5480518770747803351, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: m_LocalPosition.z
@@ -410,6 +422,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5480518770747803348, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
   m_PrefabInstance: {fileID: 223927842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &279249669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6984149832014039060, guid: ecf699785be47744bb0b92cbb3a8d825, type: 3}
+  m_PrefabInstance: {fileID: 6984149832292633361}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &439926665
 GameObject:
@@ -5738,6 +5755,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041303788}
   m_CullTransparentMesh: 1
+--- !u!1 &2046122365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8709264883088227574, guid: d8e35e2f16c6eae409d9df99ae353bd3, type: 3}
+  m_PrefabInstance: {fileID: 8709264881065698699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &380417013636845716
 PrefabInstance:
   m_ObjectHideFlags: 0
