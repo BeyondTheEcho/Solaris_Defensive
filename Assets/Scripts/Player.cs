@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     public GameObject LaserPrefab;
 
+    private Coroutine _laserCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,17 +87,18 @@ public class Player : MonoBehaviour
     //Runs in update, Checks to see if the player is firing their lasers
     private void FireZeLaserz()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+  
+        if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null)
         {
             //When the space button is pressed the FireWhileHeld() coroutines starts and is assigned to fireConstantly var
-            fireConstantly = StartCoroutine(FireWhileHeld());
+            _laserCoroutine = StartCoroutine(FireWhileHeld());
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             //When the space bar is released, stops the coroutine that fires constantly
-            StopCoroutine(fireConstantly);
+            StopCoroutine(_laserCoroutine);
+            _laserCoroutine = null;
         }
     }
 

@@ -37,7 +37,6 @@ public class EnemyPathing : MonoBehaviour
             if (transform.position == targetPosition)
             {
                 currentWaypoint++;
-                Debug.Log("this");
             }
         }
         else

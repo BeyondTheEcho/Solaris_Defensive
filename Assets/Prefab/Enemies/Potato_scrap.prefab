@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1751522396434499591}
   - component: {fileID: 1751522396434499589}
   - component: {fileID: 190866982100475820}
+  - component: {fileID: 5568488850788964953}
   m_Layer: 0
   m_Name: Potato_scrap
   m_TagString: Untagged
@@ -228,3 +229,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 0}
   health: 1
+--- !u!114 &5568488850788964953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751522396434499590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

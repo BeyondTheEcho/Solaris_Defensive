@@ -97,19 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1054194068544328720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146658933949727045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9aca3a7579d3a44b0e370e58479137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 100
 --- !u!60 &1803005450564094788
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -369,3 +356,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 0}
   health: 3
+--- !u!114 &1054194068544328720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9aca3a7579d3a44b0e370e58479137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 100

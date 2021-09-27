@@ -36,6 +36,5 @@ public class Enemy : MonoBehaviour
     public void ApplyDamage(int laserDamage)
     {
         health -= laserDamage;
-        Debug.Log(health.ToString()); 
     }
 }
