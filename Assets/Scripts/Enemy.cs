@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject enemyPrefab;
     [SerializeField] int health = 5;
 
     // Start is called before the first frame update

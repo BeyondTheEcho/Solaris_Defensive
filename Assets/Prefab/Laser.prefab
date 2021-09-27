@@ -99,6 +99,7 @@ MonoBehaviour:
   speed: 15
   pew: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
   laserVol: 1
+  laserDamage: 1
 --- !u!70 &6250435087221787046
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
