@@ -122,4 +122,43 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void TakeDamage(int dmg)
+    {
+        if (playerShields > 0)
+        {
+            playerShields -= dmg;
+        }
+        else if (playerShields <= 0)
+        {
+            playerHull -= dmg;
+        }
+        Debug.Log("playerShields: " + playerShields);
+        Debug.Log("playerHull: " + playerHull);
+    }
+
+    public void GiveHealth(int hp)
+    {
+        if (playerShields < 50)
+        {
+            playerShields += hp;
+        }
+        else if (playerHull < 100)
+        {
+            playerHull += hp;
+        }
+        
+
+        if (playerShields > 50)
+        {
+            playerShields = 50;
+        }
+        else if (playerHull > 100)
+        {
+            playerHull = 100;
+        }
+
+        Debug.Log("playerShields: " + playerShields);
+        Debug.Log("playerHull: " + playerHull);
+    }
 }

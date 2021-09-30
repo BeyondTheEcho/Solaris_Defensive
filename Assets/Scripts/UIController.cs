@@ -7,10 +7,33 @@ using UnityEngine.SceneManagement;
 public class UIController : MonoBehaviour
 {
     //Config
-    [SerializeField] GameObject OptionsMenu;
-    [SerializeField] GameObject MainMenu;
+    [Header("Menu Config: ")]
+    [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject mainMenu;
 
-    bool MenuSwitch = false;
+    [Header("Dev Menu Config: ")]
+    [SerializeField] GameObject devMenuCanvas;
+    [SerializeField] GameObject startDevMenu;
+
+    [Header("Enemy & Player: ")]
+    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject player;
+
+    [Header("Enemy Spawn Position: ")]
+    [SerializeField] GameObject enemySpawnPos;
+    [SerializeField] GameObject enemySpawnPos2;
+    [SerializeField] GameObject enemySpawnPos3;
+
+    [Header("Damage System: ")]
+    [SerializeField] int damageDealtToPlayer = 10;
+
+    [Header("Healing System: ")]
+    [SerializeField] int giveHealthToPlayer = 10;
+
+    int enemyPosIndex = 0;
+
+    bool menuSwitch = false;
+    bool buttonSwitch = true;
 
     // Start is called before the first frame update
     void Start()
@@ -40,30 +63,74 @@ public class UIController : MonoBehaviour
 
     public void OptionsMenuChecker()
     {
-            if (MenuSwitch == true)
+            if (menuSwitch == true)
             {
-                OptionsMenu.gameObject.SetActive(true);
-                MainMenu.gameObject.SetActive(false);
+                optionsMenu.gameObject.SetActive(true);
+                mainMenu.gameObject.SetActive(false);
             }
-            else if (MenuSwitch == false)
+            else if (menuSwitch == false)
             {
-                OptionsMenu.gameObject.SetActive(false);
-                MainMenu.gameObject.SetActive(true);
+                optionsMenu.gameObject.SetActive(false);
+                mainMenu.gameObject.SetActive(true);
             }
     }
     public void MenuSwitcher()
     {
-        if (MenuSwitch == true)
+        if (menuSwitch == true)
         {
-            MenuSwitch = false;
+            menuSwitch = false;
         }
-        else if (MenuSwitch == false)
+        else if (menuSwitch == false)
         {
-            MenuSwitch = true;
+            menuSwitch = true;
         }
     }
+
     public void LoadCredits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void LoadDevTest()
+    { 
+        SceneManager.LoadScene("DevPlayground");
+    }
+
+    public void SpawnEnemy()
+    {
+
+        if (enemyPosIndex == 0)
+        {
+            Instantiate(enemy, enemySpawnPos.transform.position, Quaternion.identity);
+            enemyPosIndex++;
+        }
+        else if (enemyPosIndex == 1)
+        {
+            Instantiate(enemy, enemySpawnPos2.transform.position, Quaternion.identity);
+            enemyPosIndex++;
+        }
+        else if (enemyPosIndex == 2)
+        {
+            Instantiate(enemy, enemySpawnPos3.transform.position, Quaternion.identity);
+            enemyPosIndex = 0;
+        }
+
+    }
+
+    public void DealDamageToPlayer()
+    {
+        player.GetComponent<Player>().TakeDamage(damageDealtToPlayer);
+    }
+
+    public void HealPlayer()
+    {
+        player.GetComponent<Player>().GiveHealth(giveHealthToPlayer);
+    }
+
+    public void ButtonConfig()
+    {
+        devMenuCanvas.SetActive(buttonSwitch);
+        startDevMenu.SetActive(!buttonSwitch);
+        buttonSwitch = !buttonSwitch;
     }
 }
