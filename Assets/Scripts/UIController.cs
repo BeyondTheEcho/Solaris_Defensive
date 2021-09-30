@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
     public void StartGame()
     {
         //Loads The Level 1 Scene
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(SceneManager.Scenes.Level1);
     }
 
     public void ExitGame()
@@ -64,6 +64,6 @@ public class UIController : MonoBehaviour
     }
     public void LoadCredits()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene(SceneManager.Scenes.Credits);
     }
 }

@@ -120,6 +120,6 @@ public class Player : MonoBehaviour
     //A currently unused class that will load the Main Menu on player death
     private void playerDeath()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(SceneManager.Scenes.MainMenu);
     }
 }

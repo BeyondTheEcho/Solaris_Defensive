@@ -10,7 +10,7 @@ namespace Dialogue
         // Start is called before the first frame update
         public void LoadScene()
         {
-            SceneManager.LoadScene(Scene);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
         }
     }
 }
