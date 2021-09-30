@@ -8,7 +8,8 @@ namespace Dialogue
     {
         [TextArea]
         public string Dialogue;
-        private Texture2D SpeakerSprite;
+        public Sprite SpeakerSprite;
+        public SpeakerPosition SpeakerPosition;
         public DialogueOption[] Options;
     }
 
@@ -18,5 +19,11 @@ namespace Dialogue
         [TextArea]
         public string Option;
         public DialogueNode Node;
+    }
+
+    public enum SpeakerPosition
+    {
+        Left,
+        Right
     }
 }

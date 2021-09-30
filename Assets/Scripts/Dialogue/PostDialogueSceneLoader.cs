@@ -8,7 +8,7 @@ namespace Dialogue
         public string Scene;
     
         // Start is called before the first frame update
-        public void LoadScene(/*DialogueNode _*/)
+        public void LoadScene()
         {
             SceneManager.LoadScene(Scene);
         }

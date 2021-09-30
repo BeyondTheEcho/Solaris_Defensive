@@ -3,7 +3,10 @@ guid: 54e4d717299f4ce47812e57176fbb062
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Root: {instanceID: 0}
+  - DialogueArea: {instanceID: 0}
+  - ButtonSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
