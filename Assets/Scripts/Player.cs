@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] float laserFiringPeriod = 0.2f;
+    [SerializeField] float laserSpeed = 10f;
     [SerializeField] int playerDeathDelay = 5;
 
     //Player Health Variable
@@ -110,7 +111,12 @@ public class Player : MonoBehaviour
         while (true)
         {
             //Instantiates the laser prefab just ahead of the player object
-            Instantiate(LaserPrefab, gameObject.transform.position + Vector3.right * 1, Quaternion.Euler(new Vector3(0, 0, -90)));
+            var thisLaser = Instantiate(LaserPrefab, 
+                gameObject.transform.position + Vector3.right * 1, 
+                Quaternion.Euler(new Vector3(0,0,90)));
+
+            //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
+            thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(laserSpeed, 0);
 
             //Delays the coroutine by the amount of time in the serialized var laserFiringPeriod
             yield return new WaitForSeconds(laserFiringPeriod);

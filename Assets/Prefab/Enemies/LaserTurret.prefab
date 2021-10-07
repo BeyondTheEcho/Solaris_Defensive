@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3272799392053674954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.07, y: 3.26, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.34224206, y: 0.34224206, z: 0.34224206}
   m_Children: []
   m_Father: {fileID: 0}
@@ -188,6 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  fireSpeed: 15
+  shotCounter: 0
+  minFireDelay: 0.2
+  maxFireDelay: 3
+  enemyLaserPrefab: {fileID: 121179845557328001, guid: 1b39ce55410facc4088ce8fed7be4669, type: 3}
 --- !u!114 &6715234992928137287
 MonoBehaviour:
   m_ObjectHideFlags: 0
