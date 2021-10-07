@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] int damage = 100;
 
-    // Start is called before the first frame update
-    void Start()
+    public int ReturnDamage()
     {
-        
+        return damage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnHit()
     {
-        
-    }
-
-    public void calcDamage(GameObject laser, GameObject enemy)
-    {
-        int dmg = laser.GetComponent<Laser>().ReturnLaserDamage();
-        enemy.gameObject.GetComponent<Enemy>().ApplyDamage(dmg);
+        Destroy(gameObject);
     }
 }

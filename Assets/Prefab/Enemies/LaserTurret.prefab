@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3272799392053674955}
   - component: {fileID: 3272799392053674949}
   - component: {fileID: 1635088324012348608}
+  - component: {fileID: 6715234992928137287}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -186,5 +187,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  health: 9
+  health: 500
+--- !u!114 &6715234992928137287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272799392053674954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

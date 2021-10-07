@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    [SerializeField] int health = 5;
+    [SerializeField] int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +21,16 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D laser)
     {
-        laser.gameObject.GetComponent<Laser>().DestroyLaser();
-        FindObjectOfType<DamageController>().calcDamage(laser.gameObject, gameObject);
+        DamageController damageController = laser.GetComponent<DamageController>();
+        health -= damageController.ReturnDamage();
+        Destroy(laser.gameObject);
     }
+
     public void DestroySelf()
     {
         if (health <= 0)
         {
-            Object.Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
