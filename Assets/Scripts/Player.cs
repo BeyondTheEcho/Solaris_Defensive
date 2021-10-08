@@ -71,6 +71,14 @@ public class Player : MonoBehaviour
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
+    private void OnTriggerEnter2D(Collider2D laser)
+    {
+        DamageController damageController = laser.GetComponent<DamageController>();
+        TakeDamage(damageController.ReturnDamage());
+        Destroy(laser.gameObject);
+
+    }
+
     //A coroutine that is called in start to check if the player has died
     IEnumerator PlayerDeathCheck()
     {

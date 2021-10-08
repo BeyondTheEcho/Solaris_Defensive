@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8709264883088227573}
   - component: {fileID: 7914601426501881153}
   - component: {fileID: 8709264883088227339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PotatoSlinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,8 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
   health: 6
+  fireSpeed: 10
+  shotCounter: 0
+  minFireDelay: 0.2
+  maxFireDelay: 3
+  enemyLaserPrefab: {fileID: 0}
 --- !u!60 &8709264883088227339
 PolygonCollider2D:
   m_ObjectHideFlags: 0

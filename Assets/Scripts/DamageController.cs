@@ -10,9 +10,4 @@ public class DamageController : MonoBehaviour
     {
         return damage;
     }
-
-    public void OnHit()
-    {
-        Destroy(gameObject);
-    }
 }

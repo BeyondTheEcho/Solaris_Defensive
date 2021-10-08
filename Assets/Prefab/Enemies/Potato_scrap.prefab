@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1751522396434499589}
   - component: {fileID: 190866982100475820}
   - component: {fileID: 5568488850788964953}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Potato_scrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,8 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
   health: 1
+  fireSpeed: 10
+  shotCounter: 0
+  minFireDelay: 0.2
+  maxFireDelay: 3
+  enemyLaserPrefab: {fileID: 0}
 --- !u!114 &5568488850788964953
 MonoBehaviour:
   m_ObjectHideFlags: 0
