@@ -36,7 +36,7 @@ namespace Dialogue
         private (TextMeshProUGUI text, Button button)[] _buttons = {};
     
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             _textRect = new GameObject("Text", typeof(RectTransform)).transform as RectTransform;
             _optionRect = new GameObject("Options", typeof(RectTransform)).transform as RectTransform;
