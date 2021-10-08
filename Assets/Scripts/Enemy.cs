@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Health Variables")]
     [SerializeField] int health = 100;
+
+    [Header("Enemy Weapon Variables")]
     [SerializeField] float fireSpeed = 10f;
-    [SerializeField] float shotCounter;
     [SerializeField] float minFireDelay = 0.2f;
     [SerializeField] float maxFireDelay = 3f;
     [SerializeField] GameObject enemyLaserPrefab;
+
+    [Header("Enemy Death Variables")]
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] int explosionDelay = 1;
+
+    float shotCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -64,11 +72,23 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            StartCoroutine(TriggerExplosion());
         }
     }
 
     public void ApplyDamage(int laserDamage)
     {
         health -= laserDamage;
+    }
+
+    IEnumerator TriggerExplosion()
+    {
+        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(explosionDelay);
+
+        Destroy(explosion);
+
+        yield break;
     }
 }

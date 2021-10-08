@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] GameObject LaserPrefab;
 
+    [Header("FTL Variables")]
+    [SerializeField] GameObject ftlParticleSystem;
+
     // In Script Config / Variables
     float xMin;
     float xMax;
@@ -41,6 +44,7 @@ public class Player : MonoBehaviour
     {
         PlayerMove();
         FireZeLaserz();
+        ActivateDisplacementDrive();
     }
 
     private void PlayerMove()
@@ -75,7 +79,7 @@ public class Player : MonoBehaviour
     {
         DamageController damageController = laser.GetComponent<DamageController>();
 
-        if(!damageController)
+        if (!damageController)
         {
             return;
         }
@@ -90,7 +94,7 @@ public class Player : MonoBehaviour
     IEnumerator PlayerDeathCheck()
     {
         //Checks to see if the players hull has reached 0 or less than 0
-        if(playerHull <= 0)
+        if (playerHull <= 0)
         {
             //waits for the player death delay
             yield return new WaitForSeconds(playerDeathDelay);
@@ -103,9 +107,9 @@ public class Player : MonoBehaviour
 
     //Runs in update, Checks to see if the player is firing their lasers
     private void FireZeLaserz()
-    
+
     {
-  
+
         if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null)
         {
             //When the space button is pressed the FireWhileHeld() coroutines starts and is assigned to fireConstantly var
@@ -127,8 +131,8 @@ public class Player : MonoBehaviour
         while (true)
         {
             //Instantiates the laser prefab just ahead of the player object
-            var thisLaser = Instantiate(LaserPrefab, 
-                gameObject.transform.position + Vector3.right * 1, 
+            var thisLaser = Instantiate(LaserPrefab,
+                gameObject.transform.position + Vector3.right * 1,
                 Quaternion.identity);
 
             //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
@@ -136,7 +140,7 @@ public class Player : MonoBehaviour
 
             //Delays the coroutine by the amount of time in the serialized var laserFiringPeriod
             yield return new WaitForSeconds(laserFiringPeriod);
-        }         
+        }
     }
 
     //A currently unused class that will load the Main Menu on player death
@@ -169,7 +173,7 @@ public class Player : MonoBehaviour
         {
             playerHull += hp;
         }
-        
+
 
         if (playerShields > 50)
         {
@@ -182,5 +186,13 @@ public class Player : MonoBehaviour
 
         Debug.Log("playerShields: " + playerShields);
         Debug.Log("playerHull: " + playerHull);
+    }
+
+    private void ActivateDisplacementDrive()
+    {
+        if (Input.GetKeyDown("g"))
+        {
+            Instantiate(ftlParticleSystem, transform.position, Quaternion.identity);
+        }
     }
 }

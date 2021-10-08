@@ -189,10 +189,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   fireSpeed: 15
-  shotCounter: 0
   minFireDelay: 0.2
   maxFireDelay: 3
   enemyLaserPrefab: {fileID: 837699380404679393, guid: 193b7cdcc17ded74289d619b8f567cc5, type: 3}
+  explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
 --- !u!114 &6715234992928137287
 MonoBehaviour:
   m_ObjectHideFlags: 0
