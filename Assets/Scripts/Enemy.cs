@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         var thisLaser = Instantiate(
             enemyLaserPrefab, 
             transform.position + Vector3.left * 2, 
-            Quaternion.Euler(new Vector3(0,0, -90)));
+            Quaternion.identity);
 
         thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(-fireSpeed, 0);
     }

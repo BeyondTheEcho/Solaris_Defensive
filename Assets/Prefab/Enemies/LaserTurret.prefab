@@ -192,7 +192,7 @@ MonoBehaviour:
   shotCounter: 0
   minFireDelay: 0.2
   maxFireDelay: 3
-  enemyLaserPrefab: {fileID: 121179845557328001, guid: 1b39ce55410facc4088ce8fed7be4669, type: 3}
+  enemyLaserPrefab: {fileID: 837699380404679393, guid: 193b7cdcc17ded74289d619b8f567cc5, type: 3}
 --- !u!114 &6715234992928137287
 MonoBehaviour:
   m_ObjectHideFlags: 0

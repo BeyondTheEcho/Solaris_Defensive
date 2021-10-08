@@ -9,22 +9,23 @@ public class Player : MonoBehaviour
     [Header("Player Variables")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] float laserFiringPeriod = 0.2f;
-    [SerializeField] float laserSpeed = 10f;
     [SerializeField] int playerDeathDelay = 5;
 
     //Player Health Variable
-    [Header("Player Variables")]
+    [Header("Health Variables")]
     [SerializeField] int playerShields = 50;
     [SerializeField] int playerHull = 100;
+
+    [Header("Laser Variables")]
+    [SerializeField] float laserFiringPeriod = 0.2f;
+    [SerializeField] float laserSpeed = 10f;
+    [SerializeField] GameObject LaserPrefab;
 
     // In Script Config / Variables
     float xMin;
     float xMax;
     float yMin;
     float yMax;
-
-    public GameObject LaserPrefab;
 
     private Coroutine _laserCoroutine;
 
@@ -113,7 +114,7 @@ public class Player : MonoBehaviour
             //Instantiates the laser prefab just ahead of the player object
             var thisLaser = Instantiate(LaserPrefab, 
                 gameObject.transform.position + Vector3.right * 1, 
-                Quaternion.Euler(new Vector3(0,0,90)));
+                Quaternion.identity);
 
             //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
             thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(laserSpeed, 0);
