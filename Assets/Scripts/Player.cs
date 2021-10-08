@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         yield return new WaitForSeconds(explosionDelay);      
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(SceneManager.Scenes.MainMenu);
 
     }
 

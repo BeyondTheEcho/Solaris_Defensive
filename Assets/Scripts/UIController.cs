@@ -96,7 +96,7 @@ public class UIController : MonoBehaviour
 
     public void LoadDevTest()
     { 
-        SceneManager.LoadScene("DevPlayground");
+        SceneManager.LoadScene(SceneManager.Scenes.DevPlayground);
     }
 
     public void SpawnEnemy()
