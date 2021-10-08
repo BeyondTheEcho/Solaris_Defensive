@@ -11,6 +11,7 @@ public static class SceneManager
         _scenes.Add(Scenes.Credits, "Credits");
         _scenes.Add(Scenes.MainMenu, "Main Menu");
         _scenes.Add(Scenes.Level1, "Level 1");
+        _scenes.Add(Scenes.DevPlayground, "DevPlayground");
     }
     
     public static void LoadScene(Scenes scene)
@@ -22,6 +23,7 @@ public static class SceneManager
     {
         MainMenu,
         Credits,
-        Level1
+        Level1,
+        DevPlayground
     }
 }
