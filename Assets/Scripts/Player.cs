@@ -9,12 +9,15 @@ public class Player : MonoBehaviour
     [Header("Player Variables")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] int playerDeathDelay = 5;
+    [SerializeField] int playerDeathDelay = 3;
 
     //Player Health Variable
     [Header("Health Variables")]
     [SerializeField] int playerShields = 50;
     [SerializeField] int playerHull = 100;
+    [SerializeField] int explosionDelay = 1;
+    [SerializeField] bool isPlayerDead = false;
+    [SerializeField] GameObject explosionPrefab;
 
     [Header("Laser Variables")]
     [SerializeField] float laserFiringPeriod = 0.2f;
@@ -36,7 +39,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         EstablishMoveBoundaries();
-        StartCoroutine(PlayerDeathCheck());
     }
 
     // Update is called once per frame   
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
         PlayerMove();
         FireZeLaserz();
         ActivateDisplacementDrive();
+        PlayerDeathCheck();
     }
 
     private void PlayerMove()
@@ -90,17 +93,17 @@ public class Player : MonoBehaviour
 
     }
 
-    //A coroutine that is called in start to check if the player has died
-    IEnumerator PlayerDeathCheck()
+    private void PlayerDeathCheck()
     {
         //Checks to see if the players hull has reached 0 or less than 0
-        if (playerHull <= 0)
+        if (playerHull <= 0 && isPlayerDead == false)
         {
-            //waits for the player death delay
-            yield return new WaitForSeconds(playerDeathDelay);
+            isPlayerDead = true;
 
             //Kills the player
-            playerDeath();
+            StartCoroutine(playerDeath());
+
+            SceneManager.LoadScene("Main Menu");
         }
 
     }
@@ -143,10 +146,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    //A currently unused class that will load the Main Menu on player death
-    private void playerDeath()
+
+    IEnumerator playerDeath()
     {
-        SceneManager.LoadScene("Main Menu");
+        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(explosionDelay);
+
+        Destroy(explosion);
+        Destroy(gameObject); 
+        
+        yield break;
     }
 
     public void TakeDamage(int dmg)
