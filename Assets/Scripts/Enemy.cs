@@ -27,7 +27,14 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D laser)
     {
         DamageController damageController = laser.GetComponent<DamageController>();
+
+        if (!damageController)
+        {
+            return;
+        }
+
         health -= damageController.ReturnDamage();
+
         Destroy(laser.gameObject);
     }
 
