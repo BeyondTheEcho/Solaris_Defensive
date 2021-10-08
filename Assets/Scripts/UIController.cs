@@ -57,7 +57,10 @@ public class UIController : MonoBehaviour
     public void ExitGame()
     {
         //Exits Game
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+
         Application.Quit();
     }
 

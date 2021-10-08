@@ -9,13 +9,23 @@ public class Player : MonoBehaviour
     [Header("Player Variables")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] float laserFiringPeriod = 0.2f;
-    [SerializeField] int playerDeathDelay = 5;
+    [SerializeField] int playerDeathDelay = 3;
 
     //Player Health Variable
-    [Header("Player Variables")]
+    [Header("Health Variables")]
     [SerializeField] int playerShields = 50;
     [SerializeField] int playerHull = 100;
+    [SerializeField] int explosionDelay = 1;
+    [SerializeField] bool isPlayerDead = false;
+    [SerializeField] GameObject explosionPrefab;
+
+    [Header("Laser Variables")]
+    [SerializeField] float laserFiringPeriod = 0.2f;
+    [SerializeField] float laserSpeed = 10f;
+    [SerializeField] GameObject LaserPrefab;
+
+    [Header("FTL Variables")]
+    [SerializeField] GameObject ftlParticleSystem;
 
     // In Script Config / Variables
     float xMin;
@@ -23,15 +33,12 @@ public class Player : MonoBehaviour
     float yMin;
     float yMax;
 
-    public GameObject LaserPrefab;
-
     private Coroutine _laserCoroutine;
 
     // Start is called before the first frame update
     void Start()
     {
         EstablishMoveBoundaries();
-        StartCoroutine(PlayerDeathCheck());
     }
 
     // Update is called once per frame   
@@ -39,6 +46,8 @@ public class Player : MonoBehaviour
     {
         PlayerMove();
         FireZeLaserz();
+        ActivateDisplacementDrive();
+        PlayerDeathCheck();
     }
 
     private void PlayerMove()
@@ -69,26 +78,39 @@ public class Player : MonoBehaviour
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
-    //A coroutine that is called in start to check if the player has died
-    IEnumerator PlayerDeathCheck()
+    private void OnTriggerEnter2D(Collider2D laser)
+    {
+        DamageController damageController = laser.GetComponent<DamageController>();
+
+        if (!damageController)
+        {
+            return;
+        }
+
+        TakeDamage(damageController.ReturnDamage());
+
+        Destroy(laser.gameObject);
+
+    }
+
+    private void PlayerDeathCheck()
     {
         //Checks to see if the players hull has reached 0 or less than 0
-        if(playerHull <= 0)
+        if (playerHull <= 0 && isPlayerDead == false)
         {
-            //waits for the player death delay
-            yield return new WaitForSeconds(playerDeathDelay);
+            isPlayerDead = true;
 
             //Kills the player
-            playerDeath();
+            StartCoroutine(playerDeath());          
         }
 
     }
 
     //Runs in update, Checks to see if the player is firing their lasers
     private void FireZeLaserz()
-    
+
     {
-  
+
         if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null)
         {
             //When the space button is pressed the FireWhileHeld() coroutines starts and is assigned to fireConstantly var
@@ -110,17 +132,28 @@ public class Player : MonoBehaviour
         while (true)
         {
             //Instantiates the laser prefab just ahead of the player object
-            Instantiate(LaserPrefab, gameObject.transform.position + Vector3.right * 1, Quaternion.Euler(new Vector3(0, 0, -90)));
+            var thisLaser = Instantiate(LaserPrefab,
+                gameObject.transform.position + Vector3.right * 1,
+                Quaternion.identity);
+
+            //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
+            thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(laserSpeed, 0);
 
             //Delays the coroutine by the amount of time in the serialized var laserFiringPeriod
             yield return new WaitForSeconds(laserFiringPeriod);
-        }         
+        }
     }
 
-    //A currently unused class that will load the Main Menu on player death
-    private void playerDeath()
+
+    IEnumerator playerDeath()
     {
-        SceneManager.LoadScene(SceneManager.Scenes.MainMenu);
+        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(explosionDelay);      
+        SceneManager.LoadScene("Main Menu");
+
     }
 
     public void TakeDamage(int dmg)
@@ -147,7 +180,7 @@ public class Player : MonoBehaviour
         {
             playerHull += hp;
         }
-        
+
 
         if (playerShields > 50)
         {
@@ -160,5 +193,13 @@ public class Player : MonoBehaviour
 
         Debug.Log("playerShields: " + playerShields);
         Debug.Log("playerHull: " + playerHull);
+    }
+
+    private void ActivateDisplacementDrive()
+    {
+        if (Input.GetKeyDown("g"))
+        {
+            Instantiate(ftlParticleSystem, transform.position, Quaternion.identity);
+        }
     }
 }

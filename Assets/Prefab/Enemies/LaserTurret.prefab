@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3272799392053674955}
   - component: {fileID: 3272799392053674949}
   - component: {fileID: 1635088324012348608}
-  m_Layer: 0
+  - component: {fileID: 6715234992928137287}
+  m_Layer: 7
   m_Name: LaserTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3272799392053674954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.07, y: 3.26, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.34224206, y: 0.34224206, z: 0.34224206}
   m_Children: []
   m_Father: {fileID: 0}
@@ -186,5 +187,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
-  health: 9
+  health: 100
+  fireSpeed: 15
+  minFireDelay: 0.2
+  maxFireDelay: 3
+  enemyLaserPrefab: {fileID: 837699380404679393, guid: 193b7cdcc17ded74289d619b8f567cc5, type: 3}
+  explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
+--- !u!114 &6715234992928137287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272799392053674954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
