@@ -381,6 +381,18 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: explosionDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
+    - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: ftlParticleSystem
+      value: 
+      objectReference: {fileID: 8974351978816635213, guid: 94469b2e09de5864897245ac3f43e485, type: 3}
+    - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: laserFiringPeriod
       value: 0.1
       objectReference: {fileID: 0}

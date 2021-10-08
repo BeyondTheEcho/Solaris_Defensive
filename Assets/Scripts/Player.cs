@@ -101,9 +101,7 @@ public class Player : MonoBehaviour
             isPlayerDead = true;
 
             //Kills the player
-            StartCoroutine(playerDeath());
-
-            SceneManager.LoadScene("Main Menu");
+            StartCoroutine(playerDeath());          
         }
 
     }
@@ -151,12 +149,11 @@ public class Player : MonoBehaviour
     {
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(explosionDelay);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
-        Destroy(explosion);
-        Destroy(gameObject); 
-        
-        yield break;
+        yield return new WaitForSeconds(explosionDelay);      
+        SceneManager.LoadScene("Main Menu");
+
     }
 
     public void TakeDamage(int dmg)
