@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1469379240496771637}
   - component: {fileID: 5519200031924258651}
   - component: {fileID: 6142033326069405516}
-  - component: {fileID: 7611365644049062500}
   - component: {fileID: 6177050601384082289}
   m_Layer: 9
   m_Name: Red_Laser
@@ -115,21 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pew: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
-  laserVol: 1
   laserDamage: 10
---- !u!114 &7611365644049062500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837699380404679393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 170a3cd0f241c214da166af6387bee98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
 --- !u!50 &6177050601384082289
 Rigidbody2D:
   serializedVersion: 4
