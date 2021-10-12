@@ -11,11 +11,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] float fireSpeed = 10f;
     [SerializeField] float minFireDelay = 0.2f;
     [SerializeField] float maxFireDelay = 3f;
+    [SerializeField] int laserDamage = 10;
+    [SerializeField] [Range(0, 1)] float laserVol = 0.5f;
+    [SerializeField] AudioClip laserSound;
     [SerializeField] GameObject enemyLaserPrefab;
 
     [Header("Enemy Death Variables")]
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] AudioClip deathSound;
+    [SerializeField] [Range(0, 1)] float explosionVol = 0.5f;
     [SerializeField] int explosionDelay = 1;
+
 
     float shotCounter;
 
@@ -32,18 +38,21 @@ public class Enemy : MonoBehaviour
         DestroySelf();
     }
 
-    private void OnTriggerEnter2D(Collider2D laser)
+    private void OnTriggerEnter2D(Collider2D laserHit)
     {
-        DamageController damageController = laser.GetComponent<DamageController>();
+        Laser laser = laserHit.GetComponent<Laser>();
 
-        if (!damageController)
+        if (!laser)
         {
             return;
         }
-
-        health -= damageController.ReturnDamage();
+        else
+        {
+            health -= laser.ReturnLaserDamage();
+        }
 
         Destroy(laser.gameObject);
+
     }
 
     private void FireManager()
@@ -64,6 +73,10 @@ public class Enemy : MonoBehaviour
             transform.position + Vector3.left * 2, 
             Quaternion.identity);
 
+        thisLaser.GetComponent<Laser>().SetLaserDamage(laserDamage);
+
+        AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, laserVol);
+
         thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(-fireSpeed, 0);
     }
 
@@ -76,14 +89,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void ApplyDamage(int laserDamage)
-    {
-        health -= laserDamage;
-    }
-
     IEnumerator TriggerExplosion()
     {
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, explosionVol);
 
         yield return new WaitForSeconds(explosionDelay);
 

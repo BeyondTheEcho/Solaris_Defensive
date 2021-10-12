@@ -6,24 +6,13 @@ public class Laser : MonoBehaviour
 {
     //config
     [SerializeField] AudioClip pew;
-    [SerializeField] float laserVol = 1.0f;
-    [SerializeField] int laserDamage = 1;
+    [SerializeField] int laserDamage = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetLaserDamage(int laserDmg)
     {
-        //rb.velocity = new Vector2(speed, 0f);
-        AudioSource.PlayClipAtPoint(pew, Camera.main.transform.position, laserVol);
+        laserDmg = laserDamage;
     }
 
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    
     public int ReturnLaserDamage()
     {
         return laserDamage;
