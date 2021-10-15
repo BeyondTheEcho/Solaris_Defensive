@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.2
+  m_EditorClassIdentifier: 
+  Dialogue: "???: \u201DOh my god, I am so sorry. Let me help you up\u201D she says
+    offering you and hand and saying energetically \u201CMy name is Doctor Sherie
+    Armistead but just call me Docter Sher. Nice to meet you!\u201D\n\nYou take her
+    hand and get to your feet"
+  SpeakerSprite: {fileID: 0}
+  SpeakerPosition: 0
+  Options:
+  - Option: "\u201CThanks, my name is Sky. Nice to meet you doctor Sher\u201D"
+    Node: {fileID: 11400000, guid: 372cf81ff21d7c2479a8585a1e278b3d, type: 2}
