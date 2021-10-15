@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    
     //Config
     [Header("Player Variables")]
     [SerializeField] float moveSpeed = 10f;
@@ -12,10 +16,14 @@ public class Player : MonoBehaviour
 
     //Player Health Variable
     [Header("Health Variables")]
-    [SerializeField] int playerShields = 50;
+    [SerializeField] float playerShields = 50;
+    [SerializeField] int playerMaxShields = 50;
     [SerializeField] int playerHull = 100;
-    public HullBarScript hullBar;
-    public ShieldBarScript shieldBar;
+    [SerializeField] int playerMaxHull = 100;
+    [SerializeField] int shieldRegenDelay = 5;
+    [SerializeField] int shieldRegenAmount = 5;
+    private HullBarScript hullBar;
+    private ShieldBarScript shieldBar;
 
     [Header("Death Variable")]
     [SerializeField] int playerDeathDelay = 1;
@@ -42,12 +50,27 @@ public class Player : MonoBehaviour
     float yMax;
 
     private Coroutine _laserCoroutine;
+    private Coroutine shieldRegen;
+
+    private void Awake()
+    {
+        if (instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         EstablishMoveBoundaries();
         SetHealthBars();
+
+        hullBar = FindObjectOfType<HullBarScript>();
+        shieldBar = FindObjectOfType<ShieldBarScript>();
     }
 
     // Update is called once per frame   
@@ -102,7 +125,26 @@ public class Player : MonoBehaviour
         }
 
         Destroy(laser.gameObject);
+        
+        if (shieldRegen != null)
+        {
+            StopCoroutine(shieldRegen);
+        }
+        
+        shieldRegen = StartCoroutine(ShieldRegen());
+    }
 
+    IEnumerator ShieldRegen()
+    {
+        yield return new WaitForSeconds(shieldRegenDelay);
+        
+        while (playerShields < playerMaxShields)
+        {
+
+            playerShields = Mathf.MoveTowards(playerShields, playerMaxShields, shieldRegenAmount);
+
+            yield return new WaitForSeconds(1);
+        }
     }
 
     private void PlayerDeathCheck()
@@ -191,13 +233,13 @@ public class Player : MonoBehaviour
     private void UpdateHealth()
     {
         hullBar.updateHullBar(playerHull);
-        shieldBar.updateShieldBar(playerShields);
+        shieldBar.updateShieldBar((int)playerShields);
     }
 
     private void SetHealthBars()
     {
         hullBar.SetHullBarMax(playerHull);
-        shieldBar.SetShieldBarMax(playerShields);
+        shieldBar.SetShieldBarMax((int)playerShields);
     }
 
     public void GiveHealth(int hp)
