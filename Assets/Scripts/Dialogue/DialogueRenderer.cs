@@ -110,7 +110,9 @@ namespace Dialogue
                 t.text = option.Option;
                 
                 var captured = i;
-                b.onClick.AddListener(() => StartCoroutine(_run(node.Options[captured].Node)));
+                var next = node.Options[captured].Node;
+                if (next) b.onClick.AddListener(() => StartCoroutine(_run(next)));
+                else b.onClick.AddListener(() => DialogueFinished.Invoke(node));
             }
             
             var chars = 0f;

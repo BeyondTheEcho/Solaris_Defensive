@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -104,5 +106,10 @@ public class Enemy : MonoBehaviour
         if (val - operand < min) return false;
         val -= operand;
         return true;
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<EnemySpawner>().killedEnemies++;
     }
 }

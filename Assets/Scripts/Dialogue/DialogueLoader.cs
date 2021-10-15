@@ -7,11 +7,11 @@ using UnityEngine.Events;
 public class DialogueLoader : MonoBehaviour
 {
     [SerializeField] private DialogueNode startNode;
-    [SerializeField] private int levelToLoad;
+    [SerializeField] private UnityEvent callback;
     
     public void LoadDialogueScene()
     {
-        SceneManager.LoadDialogueScene(startNode, ()=> SceneManager.LoadLevel(levelToLoad));
+        SceneManager.LoadDialogueScene(startNode, ()=> callback.Invoke());
     }
 }
 
