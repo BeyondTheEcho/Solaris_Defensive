@@ -51,7 +51,7 @@ public class UIController : MonoBehaviour
     public void StartGame()
     {
         //Loads The Level 1 Scene
-        SceneManager.LoadScene(SceneManager.Scenes.Level1);
+        SceneManager.LoadScene(SceneManager.Scenes.Map);
     }
 
     public void ExitGame()

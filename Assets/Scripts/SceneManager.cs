@@ -10,6 +10,7 @@ public static class SceneManager
     public static event Action<Scene> SceneLoaded = scene => { };
     
     private static readonly Dictionary<Scenes, string> _scenes = new Dictionary<Scenes, string>();
+    private static readonly Dictionary<int, string> _levels = new Dictionary<int, string>();
     
     private static DialogueNode _tempDialogueNode;
     private static Action _tempDialogueCallback;
@@ -21,12 +22,22 @@ public static class SceneManager
     {
         _scenes.Add(Scenes.Credits, "Credits");
         _scenes.Add(Scenes.MainMenu, "Main Menu");
-        _scenes.Add(Scenes.Level1, "Level 1");
         _scenes.Add(Scenes.DevPlayground, "DevPlayground");
         _scenes.Add(Scenes.Dialogue, "Dialogue");
         _scenes.Add(Scenes.Boss, "Boss");
+        _scenes.Add(Scenes.Map, "Map");
+        
+        _levels.Add(1, "Level 1");
 
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) => SceneLoaded(scene);
+    }
+
+    public static void LoadLevel(int level)
+    {
+        if (!_levels.TryGetValue(level, out var sceneName))
+            throw new ArgumentException($"Invalid level {level}.");
+        
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
     
     public static void LoadScene(Scenes scene)
@@ -70,9 +81,9 @@ public static class SceneManager
     {
         MainMenu,
         Credits,
-        Level1,
         DevPlayground,
         Dialogue,
-        Boss
+        Boss,
+        Map
     }
 }
