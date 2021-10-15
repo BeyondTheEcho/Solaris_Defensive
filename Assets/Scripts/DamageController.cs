@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-    [SerializeField] int damage = 100;
+    int damage = 0;
 
     public int ReturnDamage()
     {

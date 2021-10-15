@@ -191,8 +191,14 @@ MonoBehaviour:
   fireSpeed: 15
   minFireDelay: 0.2
   maxFireDelay: 3
+  laserDamage: 10
+  laserVol: 0.5
+  laserSound: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
   enemyLaserPrefab: {fileID: 837699380404679393, guid: 193b7cdcc17ded74289d619b8f567cc5, type: 3}
   explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
+  deathSound: {fileID: 8300000, guid: 20a1c5b4e29e4574dbad58b9fadd13db, type: 3}
+  explosionVol: 0.5
+  explosionDelay: 1
 --- !u!114 &6715234992928137287
 MonoBehaviour:
   m_ObjectHideFlags: 0
