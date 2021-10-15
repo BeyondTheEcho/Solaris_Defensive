@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.7
+  m_EditorClassIdentifier: 
+  Dialogue: "Dc Sherie: Doctor Sherie quickly nods and runs to one of the nearby
+    terminals, and begins to look over the information on the screen\n\nAdmiral Stafford:
+    Admiral Stafford looks toward you \u201CYou there, are you Ensign Sky\u201D It
+    sounds like less of a question and more like an order"
+  SpeakerSprite: {fileID: 0}
+  SpeakerPosition: 0
+  Options:
+  - Option: "\u201CYes Sir, Ensign Sky reporting for duty sir\u201D"
+    Node: {fileID: 11400000, guid: dbed473c220536447b1c689879aad340, type: 2}

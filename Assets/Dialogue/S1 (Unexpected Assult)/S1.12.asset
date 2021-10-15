@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.12
+  m_EditorClassIdentifier: 
+  Dialogue: "Dc Sherie: \u201CI don\u2019t know commander, but there is something
+    here. A massive power source, a nexus for all of the enemy contacts. It\u2019s
+    likely if that if it destroyed then this attack will be stopped\u201D"
+  SpeakerSprite: {fileID: 0}
+  SpeakerPosition: 0
+  Options:
+  - Option: Next
+    Node: {fileID: 11400000, guid: 22fc88410024188499120dc66fcd1dce, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.16
+  m_EditorClassIdentifier: 
+  Dialogue: "Dc Sherie: \u201CIt\u2019s not been tested in anything outside of a
+    laboratory setting, much less live combat. The situation must be dire if he wants
+    a new recruit to pilot it\u201D She says before she leads you into a launch bay,
+    where a beautiful ship sits"
+  SpeakerSprite: {fileID: 0}
+  SpeakerPosition: 0
+  Options:
+  - Option: "\u201CThis is Arondight?\u201D"
+    Node: {fileID: 11400000, guid: d2140a60b74f88d49bdee8a4e393ace2, type: 2}

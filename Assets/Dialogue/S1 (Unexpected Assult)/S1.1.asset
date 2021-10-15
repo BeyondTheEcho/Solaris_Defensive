@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.1
+  m_EditorClassIdentifier: 
+  Dialogue: "Narrator: As you walk the turn a corner, something slams into you sending
+    you tumbling to the ground. A Women in a lab coat quickly get\u2019s up before
+    you can get your barings"
+  SpeakerSprite: {fileID: 0}
+  SpeakerPosition: 0
+  Options:
+  - Option: Next
+    Node: {fileID: 11400000, guid: 4c6531ddd9de45d40984e40054b2a359, type: 2}
