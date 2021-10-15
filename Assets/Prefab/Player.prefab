@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6155493786402070766}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,13 @@ MonoBehaviour:
   playerDeathDelay: 5
   playerShields: 50
   playerHull: 100
+  explosionDelay: 1
+  isPlayerDead: 0
+  explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
   laserFiringPeriod: 0.2
   laserSpeed: 10
   LaserPrefab: {fileID: 3719698231461148713, guid: 653524a876eae244099795e6820d122b, type: 3}
+  ftlParticleSystem: {fileID: 0}
 --- !u!60 &6155493786402070766
 PolygonCollider2D:
   m_ObjectHideFlags: 0
