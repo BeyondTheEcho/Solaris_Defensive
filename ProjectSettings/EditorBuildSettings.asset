@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogueTest.unity
     guid: 3968a3b6f28c39c4b9de54d5830057a3
+  - enabled: 1
+    path: Assets/Scenes/Dialogue.unity
+    guid: 5dd90dfc0388b5446aa86cf88734596f
+  - enabled: 1
+    path: Assets/Scenes/BossTest.unity
+    guid: 12ec03767726fcd4daae3ec5ef0d298c
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: 2b793bb29e955f04b9ebb24e277cddbe
   m_configObjects: {}

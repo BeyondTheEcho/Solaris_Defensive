@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Health Variables")]
-    [SerializeField] int health = 100;
+    [SerializeField] protected int health = 100;
 
     [Header("Enemy Weapon Variables")]
     [SerializeField] float fireSpeed = 10f;
@@ -26,16 +26,15 @@ public class Enemy : MonoBehaviour
     float shotCounter;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         shotCounter = Random.Range(minFireDelay, maxFireDelay);
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         FireManager();
-        DestroySelf();
     }
 
     private void OnTriggerEnter2D(Collider2D laserHit)
@@ -46,10 +45,8 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        else
-        {
-            health -= laser.ReturnLaserDamage();
-        }
+
+        ApplyDamage(laser.ReturnLaserDamage());
 
         Destroy(laser.gameObject);
 
@@ -80,8 +77,10 @@ public class Enemy : MonoBehaviour
         thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(-fireSpeed, 0);
     }
 
-    public void DestroySelf()
+    public void ApplyDamage(int laserDamage)
     {
+        health -= laserDamage;
+        
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -98,7 +97,12 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(explosionDelay);
 
         Destroy(explosion);
-
-        yield break;
+    }
+    
+    protected bool _trySubtract(ref float val, float operand, float min = 0)
+    {
+        if (val - operand < min) return false;
+        val -= operand;
+        return true;
     }
 }

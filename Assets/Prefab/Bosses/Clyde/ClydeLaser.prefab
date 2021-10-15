@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6019384034366718294}
   - component: {fileID: 1469379240496771637}
   - component: {fileID: 5519200031924258651}
-  - component: {fileID: 6142033326069405516}
   - component: {fileID: 7611365644049062500}
   - component: {fileID: 6177050601384082289}
+  - component: {fileID: 8957662519717580002}
   m_Layer: 9
-  m_Name: Red_Laser
+  m_Name: ClydeLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837699380404679393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.06, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5595, y: 0.5595, z: 0.5595}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a07e1bd7269968498466343dc2d3cea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5615269f87d1ceb47af7c95363e7f7f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,24 +99,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0014150701, y: -0.047046036}
-  m_Size: {x: 1.04001, y: 0.19223611}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 0.17}
   m_Direction: 1
---- !u!114 &6142033326069405516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837699380404679393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e92edc9cd42c0549baa8d912c37b412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pew: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
-  laserVol: 1
-  laserDamage: 10
 --- !u!114 &7611365644049062500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +136,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8957662519717580002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837699380404679393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824575dda4c509041a00d2e30c8a78c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pew: {fileID: 8300000, guid: 69329979539407245b42359dc5c2a7cd, type: 3}
+  laserVol: 1
+  laserDamage: 100
+  Speed: 1

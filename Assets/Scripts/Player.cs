@@ -9,27 +9,19 @@ public class Player : MonoBehaviour
     [Header("Player Variables")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
+    [SerializeField] int playerDeathDelay = 3;
 
     //Player Health Variable
     [Header("Health Variables")]
     [SerializeField] int playerShields = 50;
     [SerializeField] int playerHull = 100;
-    public HullBarScript hullBar;
-    public ShieldBarScript shieldBar;
-
-    [Header("Death Variable")]
-    [SerializeField] int playerDeathDelay = 1;
-    [SerializeField] [Range(0,1)]float explosionVol = 0.5f;
+    [SerializeField] int explosionDelay = 1;
     [SerializeField] bool isPlayerDead = false;
     [SerializeField] GameObject explosionPrefab;
-    [SerializeField] AudioClip explosionSound;
 
     [Header("Laser Variables")]
     [SerializeField] float laserFiringPeriod = 0.2f;
     [SerializeField] float laserSpeed = 10f;
-    [SerializeField] int laserDamage = 100;
-    [SerializeField] [Range(0, 1)] float laserVol = 0.5f;
-    [SerializeField] AudioClip laserSound;
     [SerializeField] GameObject LaserPrefab;
 
     [Header("FTL Variables")]
@@ -47,7 +39,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         EstablishMoveBoundaries();
-        SetHealthBars();
     }
 
     // Update is called once per frame   
@@ -57,7 +48,6 @@ public class Player : MonoBehaviour
         FireZeLaserz();
         ActivateDisplacementDrive();
         PlayerDeathCheck();
-        UpdateHealth();
     }
 
     private void PlayerMove()
@@ -88,18 +78,16 @@ public class Player : MonoBehaviour
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
-    private void OnTriggerEnter2D(Collider2D laserHit)
+    private void OnTriggerEnter2D(Collider2D laser)
     {
-        Laser laser = laserHit.GetComponent<Laser>();
+        DamageController damageController = laser.GetComponent<DamageController>();
 
-        if (!laser)
+        if (!damageController)
         {
             return;
         }
-        else
-        {
-            TakeDamage(laser.ReturnLaserDamage());
-        }
+
+        TakeDamage(damageController.ReturnDamage());
 
         Destroy(laser.gameObject);
 
@@ -148,10 +136,6 @@ public class Player : MonoBehaviour
                 gameObject.transform.position + Vector3.right * 1,
                 Quaternion.identity);
 
-            thisLaser.GetComponent<Laser>().SetLaserDamage(laserDamage);
-
-            AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, laserVol);
-
             //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
             thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(laserSpeed, 0);
 
@@ -165,13 +149,11 @@ public class Player : MonoBehaviour
     {
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-        AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, explosionVol);
-
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
-        yield return new WaitForSeconds(playerDeathDelay);
-
+        yield return new WaitForSeconds(explosionDelay);      
         SceneManager.LoadScene(SceneManager.Scenes.MainMenu);
+
     }
 
     public void TakeDamage(int dmg)
@@ -186,18 +168,6 @@ public class Player : MonoBehaviour
         }
         Debug.Log("playerShields: " + playerShields);
         Debug.Log("playerHull: " + playerHull);
-    }
-
-    private void UpdateHealth()
-    {
-        hullBar.updateHullBar(playerHull);
-        shieldBar.updateShieldBar(playerShields);
-    }
-
-    private void SetHealthBars()
-    {
-        hullBar.SetHullBarMax(playerHull);
-        shieldBar.SetShieldBarMax(playerShields);
     }
 
     public void GiveHealth(int hp)
