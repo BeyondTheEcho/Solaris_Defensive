@@ -67,10 +67,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         EstablishMoveBoundaries();
-        SetHealthBars();
 
         hullBar = FindObjectOfType<HullBarScript>();
         shieldBar = FindObjectOfType<ShieldBarScript>();
+        
+        SetHealthBars();
     }
 
     // Update is called once per frame   
@@ -162,7 +163,6 @@ public class Player : MonoBehaviour
 
     //Runs in update, Checks to see if the player is firing their lasers
     private void FireZeLaserz()
-
     {
 
         if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null)
