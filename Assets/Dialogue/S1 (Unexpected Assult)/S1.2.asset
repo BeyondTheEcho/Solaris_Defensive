@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.2
   m_EditorClassIdentifier: 
-  Dialogue: "???: \u201DOh my god, I am so sorry. Let me help you up\u201D she says
-    offering you and hand and saying energetically \u201CMy name is Doctor Sherie
-    Armistead but just call me Docter Sher. Nice to meet you!\u201D\n\nYou take her
-    hand and get to your feet"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: "\u201DOh my god, I am so sorry. Let me help you up\u201D she says offering
+    you and hand and saying energetically \u201CMy name is Doctor Sherie Armistead
+    but just call me Docter Sher. Nice to meet you!\u201D\n\nYou take her hand and
+    get to your feet"
+  SpeakerName: ???
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
   Options:
   - Option: "\u201CThanks, my name is Sky. Nice to meet you doctor Sher\u201D"
     Node: {fileID: 11400000, guid: 372cf81ff21d7c2479a8585a1e278b3d, type: 2}

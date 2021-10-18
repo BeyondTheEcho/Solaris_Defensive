@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.6
   m_EditorClassIdentifier: 
-  Dialogue: "Admiral Stafford: \u201CI have no clue, every bit of information does
-    not make sense. One second our forces were fine, the next they are being annihilated!
-    Most of our fleet has been destroyed, and the rest are too damaged to continue
-    a fight like this. Those who can are currently performing a fighting retreat
-    back into the atmosphere or fleeing out of our gravity well\u201D"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: "\u201CI have no clue, every bit of information does not make sense.
+    One second our forces were fine, the next they are being annihilated! Most of
+    our fleet has been destroyed, and the rest are too damaged to continue a fight
+    like this. Those who can are currently performing a fighting retreat back into
+    the atmosphere or fleeing out of our gravity well\u201D"
+  SpeakerName: Admiral Stafford
+  SpeakerSpriteLeft: {fileID: 21300000, guid: e1ba0db38d8ce0c4b86e7e7fcec03b9c, type: 3}
+  SpeakerSpriteRight: {fileID: 0}
   Options:
   - Option: Next
     Node: {fileID: 11400000, guid: 033465959ae10b24198a4d4e0ed9a346, type: 2}

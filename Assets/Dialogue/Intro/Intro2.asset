@@ -16,7 +16,8 @@ MonoBehaviour:
     of earth itself. The tension begins to build between the various factions as
     a new recruit joins the SDF. A rookie pilot with great scores in the simulators.
     This new recruit\u2019s name is you, Sky!"
-  SpeakerSprite: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
+  SpeakerName: 
+  SpeakerSprite: {fileID: 0}
   SpeakerPosition: 0
   Options:
   - Option: Next

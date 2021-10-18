@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.16
   m_EditorClassIdentifier: 
-  Dialogue: "Dc Sherie: \u201CIt\u2019s not been tested in anything outside of a
-    laboratory setting, much less live combat. The situation must be dire if he wants
-    a new recruit to pilot it\u201D She says before she leads you into a launch bay,
-    where a beautiful ship sits"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: "\u201CIt\u2019s not been tested in anything outside of a laboratory
+    setting, much less live combat. The situation must be dire if he wants a new
+    recruit to pilot it\u201D She says before she leads you into a launch bay, where
+    a beautiful ship sits"
+  SpeakerName: Dr Sherie
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
   Options:
   - Option: "\u201CThis is Arondight?\u201D"
     Node: {fileID: 11400000, guid: d2140a60b74f88d49bdee8a4e393ace2, type: 2}

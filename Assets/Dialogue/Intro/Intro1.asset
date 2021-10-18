@@ -16,7 +16,8 @@ MonoBehaviour:
     farms of mercery\r\nGas Gaint Corporate (GGC) of The refineries of Jupiter and
     the floating city on Venus\r\nThe Lunar Union of The colonies of Uranus and Neptune\u2019s
     moons and the mining outpost on Saturn\u2019s moon of Titan\r\n"
-  SpeakerSprite: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
+  SpeakerName: 
+  SpeakerSprite: {fileID: 0}
   SpeakerPosition: 0
   Options:
   - Option: Next

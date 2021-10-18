@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.17
   m_EditorClassIdentifier: 
-  Dialogue: "Dc Sherie: \u201CYes, get in. I will start the launch sequence and get
-    you combat-ready, there is an automatic training program installed but you will
-    just have to learn on the fly. Good luck!\u201D"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: "\u201CYes, get in. I will start the launch sequence and get you combat-ready,
+    there is an automatic training program installed but you will just have to learn
+    on the fly. Good luck!\u201D"
+  SpeakerName: Dr Sherie
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
   Options:
   - Option: Next
     Node: {fileID: 11400000, guid: 7accb1dccddf4774485ece44defb4f09, type: 2}
