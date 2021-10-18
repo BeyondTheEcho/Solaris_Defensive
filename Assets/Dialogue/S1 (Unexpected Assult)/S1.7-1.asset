@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
+  m_Name: S1.7-1
+  m_EditorClassIdentifier: 
+  Dialogue: Doctor Sherie quickly nods and runs over to one of the nearby terminals,
+    and begins to look over the information on the screen.
+  SpeakerName: Dr Sherie
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 0}
+  Options:
+  - Option: Next
+    Node: {fileID: 11400000, guid: 4e442316dec00f645969af1899f428ff, type: 2}

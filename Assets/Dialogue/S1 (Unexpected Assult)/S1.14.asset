@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.14
   m_EditorClassIdentifier: 
-  Dialogue: 'Dc Sherie: Nods, before running out of the room
+  Dialogue: 'Dr Sherie Nods, before running out of the room.
 
 
-    You nod and salute
-    before following Docter Sherie out and through the building'
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+
+    You come to attention
+    and salute before following Doctor Sherie out and through the building.
+
+'
+  SpeakerName: 'Dr Sherie '
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
   Options:
   - Option: "\u201CWhat is Project Arondight?\""
     Node: {fileID: 11400000, guid: 6fc9d5bb38af5b344874e9eb2f49b005, type: 2}

@@ -9,8 +9,6 @@ namespace Boss
     {
         protected virtual Phase[] Phases => new Phase[] { };
 
-        public event Action OnDeath = () => { };
-
         private int _startingHealth;
         
         public new void Start()
@@ -18,6 +16,8 @@ namespace Boss
             base.Start();
             _startingHealth = health;
             StartCoroutine(_lifetime());
+
+            OnDeath += () => SceneManager.LoadScene(SceneManager.Scenes.Map);
         }
 
         private IEnumerator _lifetime()
@@ -28,8 +28,6 @@ namespace Boss
                 phase.PhaseEntered();
             }
         }
-        
-        private void OnDestroy() => OnDeath();
     }
 
     public class Phase

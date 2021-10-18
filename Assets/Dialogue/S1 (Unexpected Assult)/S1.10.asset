@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.10
   m_EditorClassIdentifier: 
-  Dialogue: "Dc Sherie: \u201CWhat! This is impossible! It\u2019s the junk screen!
+  Dialogue: "\u201CWhat! This is impossible! It\u2019s the junk from earth orbit?!
     There is a massive power source in the junk field if I am seeing this right.
-    Something has turned that into combat-capable vessels, that\u2019s what\u2019s
-    attacking our fleet\u201D"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+    Something has turned the scattered junk and debris left over from years of space
+    flights into combat-capable vessels, that\u2019s what\u2019s attacking our fleet.\u201D"
+  SpeakerName: Dr Sherie
+  SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
+  SpeakerSpriteRight: {fileID: 0}
   Options:
   - Option: Next
     Node: {fileID: 11400000, guid: dfbf7b7a05362b242806dd07b4b80e90, type: 2}

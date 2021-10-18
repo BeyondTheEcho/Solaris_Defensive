@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: Intro Root
   m_EditorClassIdentifier: 
-  Dialogue: 50 years ago humanity launched its first colony on Mars. The massive
-    buildup of space junk from the many launches was overcome with new technologies.
-    Since then many colonies or stations have been built  Humanity controlled the
-    solar system, but as the years passed differences grew between them. Factions
-    formed between the different colonies of humanity
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: 50 years ago, humanity founded its first colony on Mars. By that point,
+    the massive buildup of space junk from numerous launches had become nearly unmanageable.
+    So much technology left drifting in the vacuum of space. Since then, humanity
+    has built many colonies across the solar system. At first, all of humanity united
+    together, controlled the solar system, but as the years passed differences grew
+    between the colonies. Eventually, factions emerged from the different colonies.
+  SpeakerName: 
+  SpeakerSpriteLeft: {fileID: 0}
+  SpeakerSpriteRight: {fileID: 0}
   Options:
   - Option: Next
     Node: {fileID: 11400000, guid: 199f930ad22762b4aa453a0ddb250bbf, type: 2}

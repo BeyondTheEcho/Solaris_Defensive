@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
 
     [Header("Death Variable")]
     [SerializeField] int playerDeathDelay = 1;
-    [SerializeField] [Range(0,1)]float explosionVol = 0.5f;
     [SerializeField] bool isPlayerDead = false;
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] AudioClip explosionSound;
@@ -36,7 +35,6 @@ public class Player : MonoBehaviour
     [SerializeField] float laserFiringPeriod = 0.2f;
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] int laserDamage = 100;
-    [SerializeField] [Range(0, 1)] float laserVol = 0.5f;
     [SerializeField] AudioClip laserSound;
     [SerializeField] GameObject LaserPrefab;
 
@@ -51,6 +49,8 @@ public class Player : MonoBehaviour
 
     private Coroutine _laserCoroutine;
     private Coroutine shieldRegen;
+
+    private bool _dead;
 
     private void Awake()
     {
@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
     private void FireZeLaserz()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null)
+        if (Input.GetKeyDown(KeyCode.Space) && _laserCoroutine == null && !_dead)
         {
             //When the space button is pressed the FireWhileHeld() coroutines starts and is assigned to fireConstantly var
             _laserCoroutine = StartCoroutine(FireWhileHeld());
@@ -192,7 +192,7 @@ public class Player : MonoBehaviour
 
             thisLaser.GetComponent<Laser>().SetLaserDamage(laserDamage);
 
-            AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, laserVol);
+            AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, PlayerPrefs.GetFloat("GameVol" , 0.25f));
 
             //Acts on the Rb component of THIS specific instantiated laser and passes in laserSpeed
             thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(laserSpeed, 0);
@@ -205,9 +205,11 @@ public class Player : MonoBehaviour
 
     IEnumerator playerDeath()
     {
+        _dead = true;
+        if(_laserCoroutine != null) StopCoroutine(_laserCoroutine);
+        
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-
-        AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, explosionVol);
+        AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position, PlayerPrefs.GetFloat("GameVol" , 0.25f));
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 

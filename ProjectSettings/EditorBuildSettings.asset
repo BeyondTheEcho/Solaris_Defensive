@@ -15,17 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: ee759b11e17c138439f295d0a24b32ef
   - enabled: 1
-    path: Assets/Scenes/DevPlayground.unity
-    guid: 8a39bb96bfb95414a91513cc7b924e07
-  - enabled: 1
-    path: Assets/Scenes/DialogueTest.unity
-    guid: 3968a3b6f28c39c4b9de54d5830057a3
-  - enabled: 1
     path: Assets/Scenes/Dialogue.unity
     guid: 5dd90dfc0388b5446aa86cf88734596f
-  - enabled: 1
-    path: Assets/Scenes/BossTest.unity
-    guid: 12ec03767726fcd4daae3ec5ef0d298c
   - enabled: 1
     path: Assets/Scenes/Boss.unity
     guid: 2b793bb29e955f04b9ebb24e277cddbe

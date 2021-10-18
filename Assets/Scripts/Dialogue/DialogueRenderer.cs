@@ -17,6 +17,7 @@ namespace Dialogue
         
         public Sprite ButtonSprite;
         public float OptionsHeight = 100;
+        public float SpeakerHeight = 50;
         
         public float TextSpeed = 100;
         public float FontSize = 30;
@@ -29,30 +30,23 @@ namespace Dialogue
 
         public UnityEvent<DialogueNode> DialogueFinished;
         
-        private RectTransform _textRect;
+        
+        public RectTransform SpeakerRect;
+        private TextMeshProUGUI _speakerText;
+        public RectTransform TextRect;
         private TextMeshProUGUI _text;
-        private RectTransform _optionRect;
+        public RectTransform OptionRect;
 
         private (TextMeshProUGUI text, Button button)[] _buttons = {};
     
         // Start is called before the first frame update
         void Awake()
         {
-            _textRect = new GameObject("Text", typeof(RectTransform)).transform as RectTransform;
-            _optionRect = new GameObject("Options", typeof(RectTransform)).transform as RectTransform;
-            
-            if (_textRect == null) throw new InvalidOperationException("Failed to create RectTransform for text in DialogueRenderer.");
-            if (_optionRect == null) throw new InvalidOperationException("Failed to create RectTransform for options in DialogueRenderer.");
 
-            _stretch(_textRect, Vector2.right * 10, Vector2.left * 10, DialogueArea);
-            _stretch(_optionRect, Vector2.zero, Vector2.zero, DialogueArea);
-
-            _textRect.offsetMin = Vector2.up * OptionsHeight + Vector2.right * 10;
-            _optionRect.offsetMax = (DialogueArea.rect.height - OptionsHeight) * Vector2.down + Vector2.left * 10;
-
-            _text = _textRect.gameObject.AddComponent<TextMeshProUGUI>();
-            _text.fontSize = FontSize;
-            _text.color = DialogueColor;
+            _speakerText = SpeakerRect.gameObject.AddComponent<TextMeshProUGUI>();
+            _text = TextRect.gameObject.AddComponent<TextMeshProUGUI>();
+            _text.fontSize = _speakerText.fontSize = FontSize;
+            _text.color = _speakerText.color = DialogueColor;
 
             if(StartAutomatically) StartCoroutine(_run(Root));
         }
@@ -64,32 +58,27 @@ namespace Dialogue
 
         private IEnumerator _run(DialogueNode node)
         {
-            _optionRect.gameObject.SetActive(false);
+            OptionRect.gameObject.SetActive(false);
+
+            _speakerText.text = node.SpeakerName;
 
             if (LeftSpeaker) LeftSpeaker.color = Color.clear;
             if (RightSpeaker) RightSpeaker.color = Color.clear;
 
-            if (node.SpeakerSprite)
+            if (node)
             {
-                switch (node.SpeakerPosition)
+                if (node.SpeakerSpriteLeft)
                 {
-                    case SpeakerPosition.Left:
-                        if (LeftSpeaker)
-                        {
-                            LeftSpeaker.sprite = node.SpeakerSprite;
-                            LeftSpeaker.color = Color.white;
-                        }
-                        break;
-                    case SpeakerPosition.Right:
-                        if (RightSpeaker)
-                        {
-                            RightSpeaker.sprite = node.SpeakerSprite;
-                            RightSpeaker.color = Color.white;
-                        }
-                        break;
+                    LeftSpeaker.sprite = node.SpeakerSpriteLeft;
+                    LeftSpeaker.color = Color.white;
+                }
+
+                if (node.SpeakerSpriteRight)
+                {
+                    RightSpeaker.sprite = node.SpeakerSpriteRight;
+                    RightSpeaker.color = Color.white;
                 }
             }
-
 
             foreach (var (t, b) in _buttons)
             {
@@ -110,18 +99,24 @@ namespace Dialogue
                 t.text = option.Option;
                 
                 var captured = i;
-                b.onClick.AddListener(() => StartCoroutine(_run(node.Options[captured].Node)));
+                var next = node.Options[captured].Node;
+                if (next) b.onClick.AddListener(() => StartCoroutine(_run(next)));
+                else b.onClick.AddListener(() => DialogueFinished.Invoke(node));
             }
             
             var chars = 0f;
             while (chars < node.Dialogue.Length)
             {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    chars = node.Dialogue.Length;
+                }
                 chars += Time.deltaTime * TextSpeed;
                 _text.text = node.Dialogue.Substring(0, Math.Min((int)chars, node.Dialogue.Length));
                 yield return null;
             }
 
-            _optionRect.gameObject.SetActive(true);
+            OptionRect.gameObject.SetActive(true);
             
             if (node.Options.Length == 0)
             {
@@ -153,7 +148,7 @@ namespace Dialogue
             _stretch(textTransform, Vector2.right * 10, Vector2.one, t);
             var tmp = text.GetComponent<TextMeshProUGUI>();
 
-            _stretch(t, Vector2.zero, Vector2.one, _optionRect);
+            _stretch(t, Vector2.zero, Vector2.one, OptionRect);
             t.anchorMin = anchorMin;
             t.anchorMax = anchorMax;
 

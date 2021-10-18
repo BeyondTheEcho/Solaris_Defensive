@@ -98,14 +98,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   padding: 1
-  playerDeathDelay: 5
   playerShields: 50
+  playerMaxShields: 50
   playerHull: 100
-  explosionDelay: 1
+  playerMaxHull: 100
+  shieldRegenDelay: 5
+  shieldRegenAmount: 5
+  playerDeathDelay: 5
+  explosionVol: 0.5
   isPlayerDead: 0
   explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
+  explosionSound: {fileID: 8300000, guid: bf76fb5caf5f2e946a257afdb9b81bcc, type: 3}
   laserFiringPeriod: 0.2
   laserSpeed: 10
+  laserDamage: 100
+  laserVol: 0.5
+  laserSound: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
   LaserPrefab: {fileID: 3719698231461148713, guid: 653524a876eae244099795e6820d122b, type: 3}
   ftlParticleSystem: {fileID: 0}
 --- !u!60 &6155493786402070766

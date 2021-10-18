@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: Intro2
   m_EditorClassIdentifier: 
-  Dialogue: "And finally the Solaris Defense Force, the underfunded military forces
-    of earth itself. The tension begins to build between the various factions as
-    a new recruit joins the SDF. A rookie pilot with great scores in the simulators.
-    This new recruit\u2019s name is you, Sky!"
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  Dialogue: "Earth was left isolated from her colonies, left with only the Solaris
+    Defense Force: the underfunded military forces of earth itself. The tension begins
+    to build between the various factions as a new recruit joins the SDF. A rookie
+    pilot with great scores in the simulators. This new recruit\u2019s name is you,
+    Sky!"
+  SpeakerName: 
+  SpeakerSpriteLeft: {fileID: 0}
+  SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
   Options:
   - Option: Next
     Node: {fileID: 0}

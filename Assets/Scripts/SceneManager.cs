@@ -72,8 +72,8 @@ public static class SceneManager
 
     private static void _initializeBoss(Scene s)
     {
-        Object.Instantiate(_tempBossPrefab, GameObject.FindWithTag("BossSpawner").transform.position, Quaternion.identity);
-        Object.FindObjectOfType<Boss.Boss>().OnDeath += _tempBossCallback;
+        var boss = Object.Instantiate(_tempBossPrefab, GameObject.FindWithTag("BossSpawner").transform.position, Quaternion.identity);
+        boss.GetComponentInChildren<Boss.Boss>().OnDeath += _tempBossCallback;
         SceneLoaded -= _initializeBoss;
     }
 
