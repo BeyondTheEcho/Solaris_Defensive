@@ -9,8 +9,8 @@ namespace Dialogue
         [TextArea]
         public string Dialogue;
         public string SpeakerName;
-        public Sprite SpeakerSprite;
-        public SpeakerPosition SpeakerPosition;
+        public Sprite SpeakerSpriteLeft;
+        public Sprite SpeakerSpriteRight;
         public DialogueOption[] Options;
     }
 

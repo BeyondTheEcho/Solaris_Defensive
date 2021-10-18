@@ -65,27 +65,20 @@ namespace Dialogue
             if (LeftSpeaker) LeftSpeaker.color = Color.clear;
             if (RightSpeaker) RightSpeaker.color = Color.clear;
 
-            if (node && node.SpeakerSprite)
+            if (node)
             {
-                switch (node.SpeakerPosition)
+                if (node.SpeakerSpriteLeft)
                 {
-                    case SpeakerPosition.Left:
-                        if (LeftSpeaker)
-                        {
-                            LeftSpeaker.sprite = node.SpeakerSprite;
-                            LeftSpeaker.color = Color.white;
-                        }
-                        break;
-                    case SpeakerPosition.Right:
-                        if (RightSpeaker)
-                        {
-                            RightSpeaker.sprite = node.SpeakerSprite;
-                            RightSpeaker.color = Color.white;
-                        }
-                        break;
+                    LeftSpeaker.sprite = node.SpeakerSpriteLeft;
+                    LeftSpeaker.color = Color.white;
+                }
+
+                if (node.SpeakerSpriteRight)
+                {
+                    RightSpeaker.sprite = node.SpeakerSpriteRight;
+                    RightSpeaker.color = Color.white;
                 }
             }
-
 
             foreach (var (t, b) in _buttons)
             {
