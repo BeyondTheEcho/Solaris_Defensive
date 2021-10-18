@@ -19,6 +19,12 @@ namespace Boss.Clyde
         {
             new Phase(0.5f, () => StartCoroutine(_enrage()))
         };
+
+        private new void Start()
+        {
+            base.Start();
+            OnDeath += () => Stats.LevelUnlocked = Mathf.Max(2, Stats.LevelUnlocked);
+        }
         
         private new void Update()
         {
@@ -31,12 +37,6 @@ namespace Boss.Clyde
             {
                 Instantiate(LaserPrefab);
             }
-        }
-
-        private new void OnDestroy()
-        {
-            Stats.LevelUnlocked = Mathf.Max(2, Stats.LevelUnlocked);
-            base.OnDestroy();
         }
         
         private IEnumerator _enrage()
