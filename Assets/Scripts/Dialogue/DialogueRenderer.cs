@@ -69,7 +69,7 @@ namespace Dialogue
             if (LeftSpeaker) LeftSpeaker.color = Color.clear;
             if (RightSpeaker) RightSpeaker.color = Color.clear;
 
-            if (node.SpeakerSprite)
+            if (node && node.SpeakerSprite)
             {
                 switch (node.SpeakerPosition)
                 {

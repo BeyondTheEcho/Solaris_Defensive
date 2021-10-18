@@ -280,7 +280,7 @@ MonoBehaviour:
   RightSpeaker: {fileID: 2023495254}
   ButtonSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   OptionsHeight: 100
-  TextSpeed: 50
+  TextSpeed: 2000
   FontSize: 30
   DialogueColor: {r: 1, g: 0, b: 0, a: 1}
   ButtonTextColor: {r: 1, g: 0, b: 0, a: 1}
