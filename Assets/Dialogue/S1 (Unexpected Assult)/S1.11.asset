@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.11
   m_EditorClassIdentifier: 
-  Dialogue: "\u201CHow is that possible?! who could have turned  junk into ships
-    that advanced without us noticing!?\u201D"
+  Dialogue: "\u201CHow is that possible?! Who could have turned junk into ships that
+    advanced without us noticing!?\u201D"
   SpeakerName: Admiral Stafford
   SpeakerSpriteLeft: {fileID: 21300000, guid: e1ba0db38d8ce0c4b86e7e7fcec03b9c, type: 3}
   SpeakerSpriteRight: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}

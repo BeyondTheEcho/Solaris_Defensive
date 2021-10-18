@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: S1.6
   m_EditorClassIdentifier: 
   Dialogue: "\u201CWe\u2019re not sure what is happening yet. Incoming reports are
-    scattered to say the least and contradictory at the worst. As best we can tell
+    scattered to say the least and contradictory at the worst. As best we can tell,
     one second our forces were fine, the next they are being annihilated! Most of
     our fleet has been destroyed, and the rest are too damaged to continue a fight
     like this. Those who can are currently performing a fighting retreat back into
-    the atmosphere or fleeing out of our gravity well\u201D"
+    the atmosphere or fleeing out of our gravity well.\u201D"
   SpeakerName: Admiral Stafford
   SpeakerSpriteLeft: {fileID: 21300000, guid: e1ba0db38d8ce0c4b86e7e7fcec03b9c, type: 3}
   SpeakerSpriteRight: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}

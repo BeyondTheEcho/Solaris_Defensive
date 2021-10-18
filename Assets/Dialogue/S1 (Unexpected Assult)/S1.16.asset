@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue: "\u201CIt\u2019s not been tested in anything outside of a laboratory
     setting, much less live combat. The situation must be dire if he wants a new
-    recruit to pilot it\u201D she says before she leads you into a launch bay, where
+    recruit to pilot it,\u201D she says before she leads you into a launch bay, where
     a beautiful ship sits."
   SpeakerName: Dr Sherie
   SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}

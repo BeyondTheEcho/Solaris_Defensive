@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.1
   m_EditorClassIdentifier: 
-  Dialogue: "As you turn the corner, something slams into you sending you tumbling
+  Dialogue: "As you turn the corner, something slams into you sending you, tumbling
     to the ground. A women in a lab coat quickly gets up.. before you can get your
     bearings\u2026."
   SpeakerName: Narrator

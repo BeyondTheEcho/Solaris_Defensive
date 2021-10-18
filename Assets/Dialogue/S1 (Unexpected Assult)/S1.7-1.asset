@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.7-1
   m_EditorClassIdentifier: 
-  Dialogue: '*quickly nods* and runs to one of the nearby terminals, and begins to
-    look over the information on the screen'
+  Dialogue: Doctor Sherie quickly nods and runs over to one of the nearby terminals,
+    and begins to look over the information on the screen.
   SpeakerName: Dr Sherie
   SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
   SpeakerSpriteRight: {fileID: 0}

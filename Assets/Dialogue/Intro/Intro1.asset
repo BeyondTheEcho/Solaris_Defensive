@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Intro1
   m_EditorClassIdentifier: 
   Dialogue: "The Red Planet Coalition (RPC) of the slowly terraforming Mars and the
-    solar farms of mercery, The Gas Gaint Corporate (GGC) of the refineries of Jupiter
-    and the floating city on Venus, The Lunar Union of the colonies of Uranus and
-    Neptune\u2019s moons and the mining outpost on Saturn\u2019s moon of Titan. These
-    were just the beginning\u2026"
+    solar farms of Mercury, The Gas Giant Corporation (GGC) of the refineries of
+    Jupiter and the floating city on Venus, The Lunar Union of the colonies of Uranus
+    and Neptune\u2019s moons and the mining outpost on Saturn\u2019s moon of Titan.
+    These were just the beginning\u2026"
   SpeakerName: 
   SpeakerSpriteLeft: {fileID: 0}
   SpeakerSpriteRight: {fileID: 0}

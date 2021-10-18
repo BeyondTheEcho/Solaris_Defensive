@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.14
   m_EditorClassIdentifier: 
-  Dialogue: 'Dr Sherie Nods, before running out of the room
+  Dialogue: 'Dr Sherie Nods, before running out of the room.
 
-    
 
-    You come
-    to attention and salute before following Doctor Sherie out and through the building
+
+    You come to attention
+    and salute before following Doctor Sherie out and through the building.
 
 '
   SpeakerName: 'Dr Sherie '

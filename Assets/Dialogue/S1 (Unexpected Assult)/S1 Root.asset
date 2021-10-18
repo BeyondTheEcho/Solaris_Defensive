@@ -16,7 +16,7 @@ MonoBehaviour:
     adjusting your uniform slightly as you do. Trying to look your best for your
     introduction with Admiral Gabriel Stafford, your commanding officer. An unspoken
     tension can be felt throughout the entire facility. All combat forces have been
-    placed on stand by as a precaution.
+    placed on standby as a precaution.
   SpeakerName: Narrator
   SpeakerSpriteLeft: {fileID: 0}
   SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}

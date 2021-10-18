@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: Intro Root
   m_EditorClassIdentifier: 
-  Dialogue: 50 years ago, humanity founded its first colony on Mars. By that point
+  Dialogue: 50 years ago, humanity founded its first colony on Mars. By that point,
     the massive buildup of space junk from numerous launches had become nearly unmanageable.
     So much technology left drifting in the vacuum of space. Since then, humanity
     has built many colonies across the solar system. At first, all of humanity united
-    together controlled the solar system, but as the years passed differences grew
+    together, controlled the solar system, but as the years passed differences grew
     between the colonies. Eventually, factions emerged from the different colonies.
   SpeakerName: 
   SpeakerSpriteLeft: {fileID: 0}

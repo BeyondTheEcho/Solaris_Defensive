@@ -15,7 +15,7 @@ MonoBehaviour:
   Dialogue: "\u201CWhat! This is impossible! It\u2019s the junk from earth orbit?!
     There is a massive power source in the junk field if I am seeing this right.
     Something has turned the scattered junk and debris left over from years of space
-    flights into combat-capable vessels, that\u2019s what\u2019s attacking our fleet\u201D"
+    flights into combat-capable vessels, that\u2019s what\u2019s attacking our fleet.\u201D"
   SpeakerName: Dr Sherie
   SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
   SpeakerSpriteRight: {fileID: 0}
