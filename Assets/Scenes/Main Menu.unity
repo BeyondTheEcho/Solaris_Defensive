@@ -715,6 +715,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 154709520}
+    - target: {fileID: 5858726080580410386, guid: 674b9523c36b2854d88cd11d56d2138d, type: 3}
+      propertyPath: m_Name
+      value: Dev_Playground_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858726080580410386, guid: 674b9523c36b2854d88cd11d56d2138d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5858726080969004326, guid: 674b9523c36b2854d88cd11d56d2138d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
+  health: 100
   fireSpeed: 15
   minFireDelay: 0.3
   maxFireDelay: 3
