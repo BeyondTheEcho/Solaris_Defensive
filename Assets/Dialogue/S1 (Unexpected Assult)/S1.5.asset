@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.5
   m_EditorClassIdentifier: 
-  Dialogue: "\u201CAdmiral Stafford! What\u2019s going on\u201D She says to a figure
-    in a at ease stance. He turns to her as she speaks"
+  Dialogue: "\u201CAdmiral Stafford! What\u2019s going on\u201D She says to a towering
+    figure with his back turned. He stands at ease, radiating absolute calm throughout
+    the room despite the tense situation. He turns to her as she speaks"
   SpeakerName: Dr Sherie
   SpeakerSpriteLeft: {fileID: 21300000, guid: 7cf51c8beed3aeb42921a1149c65f933, type: 3}
   SpeakerSpriteRight: {fileID: 21300000, guid: e1ba0db38d8ce0c4b86e7e7fcec03b9c, type: 3}

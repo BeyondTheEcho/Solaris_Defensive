@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: S1.3-2
   m_EditorClassIdentifier: 
-  Dialogue: " As she speaks, alarms begin going off and red lights fill the hallways.
-    A robotic\r voice says \"Warning, warning, SDF orbital forces all being attacked
-    by an\r unknown enemy\""
+  Dialogue: "As she speaks alarms begin to blare and red lights pulse throughout
+    the hallways. A robotic voice chimes \u201C::WARNING::WARNING:: SDF ORBITAL FORCES
+    ARE UNDER ATTACK ::ENEMY::UNKNOWN::\u201D"
   SpeakerName: 
   SpeakerSpriteLeft: {fileID: 0}
   SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}

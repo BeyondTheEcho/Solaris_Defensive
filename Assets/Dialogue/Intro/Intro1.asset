@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780243da1c2a8584abaad20b13d3ce3a, type: 3}
   m_Name: Intro1
   m_EditorClassIdentifier: 
-  Dialogue: "Red Planet Coalition (RPC) of the slowly terraforming Mars and the solar
-    farms of mercery\r\nGas Gaint Corporate (GGC) of The refineries of Jupiter and
-    the floating city on Venus\r\nThe Lunar Union of The colonies of Uranus and Neptune\u2019s
-    moons and the mining outpost on Saturn\u2019s moon of Titan\r\n"
+  Dialogue: "The Red Planet Coalition (RPC) of the slowly terraforming Mars and the
+    solar farms of mercery, The Gas Gaint Corporate (GGC) of the refineries of Jupiter
+    and the floating city on Venus, The Lunar Union of the colonies of Uranus and
+    Neptune\u2019s moons and the mining outpost on Saturn\u2019s moon of Titan. These
+    were just the beginning\u2026"
   SpeakerName: 
-  SpeakerSprite: {fileID: 0}
-  SpeakerPosition: 0
+  SpeakerSpriteLeft: {fileID: 0}
+  SpeakerSpriteRight: {fileID: 0}
   Options:
   - Option: Next
     Node: {fileID: 11400000, guid: edb518feea13d4d42842fceadd151569, type: 2}

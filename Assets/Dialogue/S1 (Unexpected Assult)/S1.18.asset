@@ -15,7 +15,7 @@ MonoBehaviour:
   Dialogue: You enter the most highly advanced piece of equipment that you have ever
     seen, you can feel the ship start to hum as its fusion reactor begins to start
     up. You sit at the control as the ship begins its automatic launch sequence.
-    You strap yourself in and ready yourself for actual combat
+    You strap yourself in and ready yourself for actual combat.
   SpeakerName: 
   SpeakerSpriteLeft: {fileID: 0}
   SpeakerSpriteRight: {fileID: 21300000, guid: 9a96caafec4a5cf4bbd5150f49124e46, type: 3}
