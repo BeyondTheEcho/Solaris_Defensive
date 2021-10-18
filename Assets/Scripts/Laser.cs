@@ -10,7 +10,7 @@ public class Laser : MonoBehaviour
 
     public void SetLaserDamage(int laserDmg)
     {
-        laserDmg = laserDamage;
+        laserDamage = laserDmg;
     }
 
     public int ReturnLaserDamage()

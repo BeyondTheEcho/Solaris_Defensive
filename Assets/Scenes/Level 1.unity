@@ -280,6 +280,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
+      propertyPath: laserDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: explosionVol
       value: 0.55
       objectReference: {fileID: 0}
@@ -301,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 8974351978816635213, guid: 94469b2e09de5864897245ac3f43e485, type: 3}
     - target: {fileID: 6155493786402070765, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: laserFiringPeriod
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6155493786402070767, guid: a6dbe04f66738444f8e5a56fab071600, type: 3}
       propertyPath: m_RootOrder
@@ -1255,13 +1259,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1442860317014310594, guid: 8441d31309745cb4db83c5614c137465, type: 3}
-      propertyPath: waveConfigs.Array.size
-      value: 1
+      propertyPath: startingWave
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1442860317014310594, guid: 8441d31309745cb4db83c5614c137465, type: 3}
+      propertyPath: waveConfigs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442860317014310594, guid: 8441d31309745cb4db83c5614c137465, type: 3}
+      propertyPath: waveConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f23b54238464e3c4c8ca9650f1d39734, type: 2}
     - target: {fileID: 1442860317014310594, guid: 8441d31309745cb4db83c5614c137465, type: 3}
       propertyPath: waveConfigs.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: f23b54238464e3c4c8ca9650f1d39734, type: 2}
+      objectReference: {fileID: 11400000, guid: 77f7ed0b035d53c44b456d1e4a1816dc, type: 2}
     - target: {fileID: 1442860317014310594, guid: 8441d31309745cb4db83c5614c137465, type: 3}
       propertyPath: waveConfigs.Array.data[3]
       value: 
@@ -1530,10 +1542,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1700110682614344140, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 2346065034435068548, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 2609434053269683878, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
       propertyPath: m_Name
       value: Path (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3330327504626074315, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330327504626074315, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908253706866119099, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908253706866119099, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218060047420617019, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 5859313643646747067, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1577,6 +1617,38 @@ PrefabInstance:
     - target: {fileID: 5859313643646747067, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142265893246799673, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6226313647628238949, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226313647628238949, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220530417958491824, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220530417958491824, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677373495530693224, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677373495530693224, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863980602033980834, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}
+      propertyPath: m_Name
+      value: Waypoint (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25c0c7057c97d994eac37a5d03e457b1, type: 3}

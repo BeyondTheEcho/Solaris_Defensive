@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb29df636dd044fbe0460056f1ed0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   fireSpeed: 10000000
   minFireDelay: 10000000
   maxFireDelay: 10000000

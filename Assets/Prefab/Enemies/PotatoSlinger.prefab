@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8709264883088227572}
   - component: {fileID: 8709264883088227573}
   - component: {fileID: 7914601426501881153}
+  - component: {fileID: -5103338597074607887}
   - component: {fileID: 8709264883088227339}
   m_Layer: 7
   m_Name: PotatoSlinger
@@ -96,12 +97,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318c7041a4463b847ad319ee7af1641b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
-  fireSpeed: 10
-  shotCounter: 0
-  minFireDelay: 0.2
-  maxFireDelay: 3
-  enemyLaserPrefab: {fileID: 0}
+  health: 500
+  fireSpeed: 3
+  minFireDelay: 2
+  maxFireDelay: 5
+  laserDamage: 100
+  laserSound: {fileID: 8300000, guid: 0e1222d9d2cc065418b6e7f0e5364797, type: 3}
+  enemyLaserPrefab: {fileID: 837699380404679393, guid: ab1dc4edc28f6e84b9780b4511ba18f9, type: 3}
+  explosionPrefab: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 20a1c5b4e29e4574dbad58b9fadd13db, type: 3}
+  explosionDelay: 1
+--- !u!114 &-5103338597074607887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709264883088227574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f09a9e45a37c5c4da05056c1415b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &8709264883088227339
 PolygonCollider2D:
   m_ObjectHideFlags: 0
