@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
+    public event Action OnDeath = () => { };
+    
     [Header("Enemy Health Variables")]
     [SerializeField] protected int health = 100;
 
@@ -84,6 +86,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            OnDeath.Invoke();
             StartCoroutine(TriggerExplosion());
         }
     }
