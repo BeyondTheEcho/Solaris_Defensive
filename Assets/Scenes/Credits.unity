@@ -399,12 +399,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Project Manager & \nGeneralist Programmer\tStelios Klapsis\n\nLead Programmer\t\tCatSandwich\n\nGeneralist
-    programmer\tIsaac Wurtele\n\nUI Specialist\t\t\tClare Benn\n\nArt Director\t\t\tEmily
-    Hoover\n\nLead Storyteller\t\tJonah Kelly\n\n"
+  m_text: "Project Manager & Programmer\n\nStelios Klapsis                          
+    \r\n\r\n\nLead Programmer\r\n\nJoshua Torrington-Smith\r\n\r\n\nGeneralist programmer\r\n\nIsaac
+    Wurtele\r\n\r\n\nUI Specialist\r\n\nClare Benn\r\n\r\n\nArt Director\r\n\nEmily
+    Hoover\r\n\r\n\nLead Writer & Story Teller\r\n\nJonah Kelly\r\n\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
-  m_sharedMaterial: {fileID: -4502235891908585967, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -428,14 +429,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
+  m_fontSize: 72
   m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -719,8 +720,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
-  m_sharedMaterial: {fileID: -4502235891908585967, guid: bcd99154e725b424baf3a2bc55060e8b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0bb4f338217a1904cb185e1b3b3328bb, type: 2}
+  m_sharedMaterial: {fileID: -4141970929645224902, guid: 0bb4f338217a1904cb185e1b3b3328bb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6019384034366718294}
   - component: {fileID: 1469379240496771637}
   - component: {fileID: 5519200031924258651}
-  - component: {fileID: 7611365644049062500}
   - component: {fileID: 6177050601384082289}
   - component: {fileID: 8957662519717580002}
   m_Layer: 9
@@ -102,19 +101,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 0.17}
   m_Direction: 1
---- !u!114 &7611365644049062500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837699380404679393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 170a3cd0f241c214da166af6387bee98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
 --- !u!50 &6177050601384082289
 Rigidbody2D:
   serializedVersion: 4
@@ -149,6 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pew: {fileID: 8300000, guid: 69329979539407245b42359dc5c2a7cd, type: 3}
-  laserVol: 1
-  laserDamage: 100
+  laserDamage: 10
   Speed: 1
