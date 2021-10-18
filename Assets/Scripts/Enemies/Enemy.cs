@@ -14,14 +14,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] float minFireDelay = 0.2f;
     [SerializeField] float maxFireDelay = 3f;
     [SerializeField] int laserDamage = 10;
-    [SerializeField] [Range(0, 1)] float laserVol = 0.5f;
     [SerializeField] AudioClip laserSound;
     [SerializeField] GameObject enemyLaserPrefab;
 
     [Header("Enemy Death Variables")]
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] AudioClip deathSound;
-    [SerializeField] [Range(0, 1)] float explosionVol = 0.5f;
     [SerializeField] int explosionDelay = 1;
 
 
@@ -74,7 +72,7 @@ public class Enemy : MonoBehaviour
 
         thisLaser.GetComponent<Laser>().SetLaserDamage(laserDamage);
 
-        AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, laserVol);
+        AudioSource.PlayClipAtPoint(laserSound, Camera.main.transform.position, PlayerPrefs.GetFloat("GameVol" , 0.25f));
 
         thisLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(-fireSpeed, 0);
     }
@@ -94,7 +92,7 @@ public class Enemy : MonoBehaviour
     {
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, explosionVol);
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, PlayerPrefs.GetFloat("GameVol" , 0.25f));
 
         yield return new WaitForSeconds(explosionDelay);
 

@@ -622,6 +622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossPrefab: {fileID: 8642592551079337511, guid: 307c0111c2478484d90ac3232ad47dd9, type: 3}
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &976245035 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1492492366501775120, guid: ebd52359711b5c14ba1aac678b27629d, type: 3}
