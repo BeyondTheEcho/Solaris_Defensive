@@ -29,7 +29,11 @@ namespace Boss
             }
         }
         
-        private void OnDestroy() => OnDeath();
+        protected void OnDestroy()
+        {
+            OnDeath();
+            SceneManager.LoadScene(SceneManager.Scenes.Map);
+        }
     }
 
     public class Phase

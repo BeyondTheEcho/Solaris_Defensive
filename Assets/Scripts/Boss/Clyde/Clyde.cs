@@ -33,6 +33,12 @@ namespace Boss.Clyde
             }
         }
 
+        private new void OnDestroy()
+        {
+            Stats.LevelUnlocked = Mathf.Max(2, Stats.LevelUnlocked);
+            base.OnDestroy();
+        }
+        
         private IEnumerator _enrage()
         {
             FireRate *= 2;

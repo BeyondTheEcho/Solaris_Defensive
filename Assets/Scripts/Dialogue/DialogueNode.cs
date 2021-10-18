@@ -8,6 +8,7 @@ namespace Dialogue
     {
         [TextArea]
         public string Dialogue;
+        public string SpeakerName;
         public Sprite SpeakerSprite;
         public SpeakerPosition SpeakerPosition;
         public DialogueOption[] Options;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Dialogue;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class UIController : MonoBehaviour
     [Header("Menu Config: ")]
     [SerializeField] GameObject optionsMenu;
     [SerializeField] GameObject mainMenu;
+    [SerializeField] DialogueNode introDialogue;
 
     [Header("Dev Menu Config: ")]
     [SerializeField] GameObject devMenuCanvas;
@@ -51,7 +53,7 @@ public class UIController : MonoBehaviour
     public void StartGame()
     {
         //Loads The Level 1 Scene
-        SceneManager.LoadScene(SceneManager.Scenes.Map);
+        SceneManager.LoadDialogueScene(introDialogue, () => SceneManager.LoadScene(SceneManager.Scenes.Map));
     }
 
     public void ExitGame()

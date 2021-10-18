@@ -800,5 +800,9 @@ PrefabInstance:
       propertyPath: optionMenuUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7226925114043376825, guid: c3433a2cc6aea8240bc190df437d5901, type: 3}
+      propertyPath: introDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 005b9c570b37e2c459ac8dac6dc72994, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3433a2cc6aea8240bc190df437d5901, type: 3}

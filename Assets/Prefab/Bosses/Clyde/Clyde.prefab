@@ -324,12 +324,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb29df636dd044fbe0460056f1ed0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2000
+  health: 100
   fireSpeed: 10000000
   minFireDelay: 10000000
   maxFireDelay: 10000000
+  laserDamage: 10
+  laserSound: {fileID: 0}
   enemyLaserPrefab: {fileID: 837699380404679393, guid: 193b7cdcc17ded74289d619b8f567cc5, type: 3}
   explosionPrefab: {fileID: 6827045399360791362, guid: f01b7c79e1f80f14581de08e33d8c421, type: 3}
+  deathSound: {fileID: 8300000, guid: bf76fb5caf5f2e946a257afdb9b81bcc, type: 3}
   explosionDelay: 1
   Top: {fileID: 5062920030106447919}
   Bottom: {fileID: 3586751265285122}
